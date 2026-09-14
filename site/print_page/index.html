@@ -1,0 +1,1228 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Afdrukken - Cursus Databases</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.ec1eaa64.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../css/print-site.css">
+    
+      <link rel="stylesheet" href="../css/print-site-material.css">
+    
+    <script>__md_scope=new URL("/",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  
+        <script type="text/javascript">
+        document.addEventListener('DOMContentLoaded', function () {
+            remove_material_navigation();remove_mkdocs_theme_navigation();generate_toc();
+        })
+        </script>
+        </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#index" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Cursus Databases" class="md-header__button md-logo" aria-label="Cursus Databases" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Cursus Databases
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Afdrukken
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../inleiding/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Inleiding
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../relationele_modellen/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Relationele modellen
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../er_diagrammen/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  ER-diagrammen
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../sql_basis/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  SQL basis
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../joins/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Joins
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../normalisatie/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Normalisatie
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../indexen_performantie/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Indexen en performantie
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../transacties/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Transacties
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../praktijkcases/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Praktijkcases
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="./" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Afdrukken
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Cursus Databases" class="md-nav__button md-logo" aria-label="Cursus Databases" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Cursus Databases
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../inleiding/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Inleiding
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../relationele_modellen/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Relationele modellen
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../er_diagrammen/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ER-diagrammen
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sql_basis/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SQL basis
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../joins/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Joins
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../normalisatie/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Normalisatie
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../indexen_performantie/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Indexen en performantie
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../transacties/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Transacties
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../praktijkcases/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Praktijkcases
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Afdrukken
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Afdrukken
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#index" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1 Home
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#inleiding" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2 Inleiding
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#relationele_modellen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3 Relationele modellen
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#er_diagrammen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4 ER-diagrammen
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sql_basis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5 SQL basis
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#joins" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6 Joins
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#normalisatie" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7 Normalisatie
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#indexen_performantie" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8 Indexen en performantie
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#transacties" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9 Transacties
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#praktijkcases" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10 Praktijkcases
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#index" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1 Home
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#inleiding" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2 Inleiding
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#relationele_modellen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3 Relationele modellen
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#er_diagrammen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4 ER-diagrammen
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sql_basis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5 SQL basis
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#joins" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6 Joins
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#normalisatie" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7 Normalisatie
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#indexen_performantie" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8 Indexen en performantie
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#transacties" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9 Transacties
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#praktijkcases" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10 Praktijkcases
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<div id="print-site-page" class="print-site-enumerate-headings print-site-enumerate-figures">
+        <section class="print-page">
+            <div id="print-page-toc" data-toc-depth="3">
+                <nav role='navigation' class='print-page-toc-nav'>
+                <h1 class='print-page-toc-title'>Table of Contents</h1>
+                </nav>
+            </div>
+        </section>
+        <section class="print-page" id="index" heading-number="1"><h1 id="index-welcome-to-mkdocs">Welcome to MkDocs</h1>
+<p>For full documentation visit <a href="https://www.mkdocs.org">mkdocs.org</a>.</p>
+<h2 id="index-commands">Commands</h2>
+<ul>
+<li><code>mkdocs new [dir-name]</code> - Create a new project.</li>
+<li><code>mkdocs serve</code> - Start the live-reloading docs server.</li>
+<li><code>mkdocs build</code> - Build the documentation site.</li>
+<li><code>mkdocs -h</code> - Print help message and exit.</li>
+</ul>
+<h2 id="index-project-layout">Project layout</h2>
+<pre><code>mkdocs.yml    # The configuration file.
+docs/
+    index.md  # The documentation homepage.
+    ...       # Other markdown pages, images and other files.
+</code></pre></section><section class="print-page" id="inleiding" heading-number="2"><h1 id="inleiding-inleiding">Inleiding</h1>
+<h2 id="inleiding-wat-is-een-database">Wat is een database?</h2>
+<p><em>(Nog aan te vullen)</em></p>
+<h2 id="inleiding-waarom-gebruiken-we-databases">Waarom gebruiken we databases?</h2>
+<p><em>(Nog aan te vullen)</em></p>
+<h2 id="inleiding-soorten-databases">Soorten databases</h2>
+<p><em>(Nog aan te vullen)</em></p></section><section class="print-page" id="relationele_modellen" heading-number="3"><h1 id="relationele_modellen-relationele-modellen">Relationele modellen</h1>
+<h2 id="relationele_modellen-tabellen-rijen-en-kolommen">Tabellen, rijen en kolommen</h2>
+<p><em>(Nog aan te vullen)</em></p>
+<h2 id="relationele_modellen-primaire-sleutels">Primaire sleutels</h2>
+<p><em>(Nog aan te vullen)</em></p>
+<h2 id="relationele_modellen-vreemde-sleutels">Vreemde sleutels</h2>
+<p><em>(Nog aan te vullen)</em></p></section><section class="print-page" id="er_diagrammen" heading-number="4"><h1 id="er_diagrammen-er-diagrammen">ER-diagrammen</h1>
+<h2 id="er_diagrammen-entiteiten-en-attributen">Entiteiten en attributen</h2>
+<p><em>(Nog aan te vullen)</em></p>
+<h2 id="er_diagrammen-relaties-tussen-entiteiten">Relaties tussen entiteiten</h2>
+<p><em>(Nog aan te vullen)</em></p>
+<h2 id="er_diagrammen-cardinaliteit">Cardinaliteit</h2>
+<p><em>(Nog aan te vullen)</em></p></section><section class="print-page" id="sql_basis" heading-number="5"><h1 id="sql_basis-sql-basis">SQL basis</h1>
+<h2 id="sql_basis-select">SELECT</h2>
+<p><em>(Nog aan te vullen)</em></p>
+<h2 id="sql_basis-insert">INSERT</h2>
+<p><em>(Nog aan te vullen)</em></p>
+<h2 id="sql_basis-update">UPDATE</h2>
+<p><em>(Nog aan te vullen)</em></p>
+<h2 id="sql_basis-delete">DELETE</h2>
+<p><em>(Nog aan te vullen)</em></p></section><section class="print-page" id="joins" heading-number="6"><h1 id="joins-joins">Joins</h1>
+<h2 id="joins-inner-join">INNER JOIN</h2>
+<p><em>(Nog aan te vullen)</em></p>
+<h2 id="joins-left-join">LEFT JOIN</h2>
+<p><em>(Nog aan te vullen)</em></p>
+<h2 id="joins-right-join">RIGHT JOIN</h2>
+<p><em>(Nog aan te vullen)</em></p></section><section class="print-page" id="normalisatie" heading-number="7"><h1 id="normalisatie-normalisatie">Normalisatie</h1>
+<h2 id="normalisatie-waarom-normaliseren">Waarom normaliseren?</h2>
+<p><em>(Nog aan te vullen)</em></p>
+<h2 id="normalisatie-eerste-normaalvorm-1nf">Eerste normaalvorm (1NF)</h2>
+<p><em>(Nog aan te vullen)</em></p>
+<h2 id="normalisatie-tweede-normaalvorm-2nf">Tweede normaalvorm (2NF)</h2>
+<p><em>(Nog aan te vullen)</em></p>
+<h2 id="normalisatie-derde-normaalvorm-3nf">Derde normaalvorm (3NF)</h2>
+<p><em>(Nog aan te vullen)</em></p></section><section class="print-page" id="indexen_performantie" heading-number="8"><h1 id="indexen_performantie-indexen-en-performantie">Indexen en performantie</h1>
+<h2 id="indexen_performantie-wat-is-een-index">Wat is een index?</h2>
+<p><em>(Nog aan te vullen)</em></p>
+<h2 id="indexen_performantie-wanneer-gebruik-je-een-index">Wanneer gebruik je een index?</h2>
+<p><em>(Nog aan te vullen)</em></p></section><section class="print-page" id="transacties" heading-number="9"><h1 id="transacties-transacties">Transacties</h1>
+<h2 id="transacties-wat-is-een-transactie">Wat is een transactie?</h2>
+<p><em>(Nog aan te vullen)</em></p>
+<h2 id="transacties-acid-eigenschappen">ACID-eigenschappen</h2>
+<p><em>(Nog aan te vullen)</em></p></section><section class="print-page" id="praktijkcases" heading-number="10"><h1 id="praktijkcases-praktijkcases">Praktijkcases</h1>
+<p><em>(Nog aan te vullen)</em></p></section></div><style>.print-site-enumerate-headings #index > h1:before { content: '1 ' }
+
+                .print-site-enumerate-headings #index h2:before { content: '1.' counter(counter-index-2) ' ' }
+                .print-site-enumerate-headings #index h2 {  counter-reset: counter-index-3 ;  counter-increment: counter-index-2 }
+            
+                .print-site-enumerate-headings #index h3:before { content: '1.' counter(counter-index-2) '.' counter(counter-index-3) ' ' }
+                .print-site-enumerate-headings #index h3 {  counter-increment: counter-index-3 }
+            
+.print-site-enumerate-headings #inleiding > h1:before { content: '2 ' }
+
+                .print-site-enumerate-headings #inleiding h2:before { content: '2.' counter(counter-inleiding-2) ' ' }
+                .print-site-enumerate-headings #inleiding h2 {  counter-reset: counter-inleiding-3 ;  counter-increment: counter-inleiding-2 }
+            
+                .print-site-enumerate-headings #inleiding h3:before { content: '2.' counter(counter-inleiding-2) '.' counter(counter-inleiding-3) ' ' }
+                .print-site-enumerate-headings #inleiding h3 {  counter-increment: counter-inleiding-3 }
+            
+.print-site-enumerate-headings #relationele_modellen > h1:before { content: '3 ' }
+
+                .print-site-enumerate-headings #relationele_modellen h2:before { content: '3.' counter(counter-relationele_modellen-2) ' ' }
+                .print-site-enumerate-headings #relationele_modellen h2 {  counter-reset: counter-relationele_modellen-3 ;  counter-increment: counter-relationele_modellen-2 }
+            
+                .print-site-enumerate-headings #relationele_modellen h3:before { content: '3.' counter(counter-relationele_modellen-2) '.' counter(counter-relationele_modellen-3) ' ' }
+                .print-site-enumerate-headings #relationele_modellen h3 {  counter-increment: counter-relationele_modellen-3 }
+            
+.print-site-enumerate-headings #er_diagrammen > h1:before { content: '4 ' }
+
+                .print-site-enumerate-headings #er_diagrammen h2:before { content: '4.' counter(counter-er_diagrammen-2) ' ' }
+                .print-site-enumerate-headings #er_diagrammen h2 {  counter-reset: counter-er_diagrammen-3 ;  counter-increment: counter-er_diagrammen-2 }
+            
+                .print-site-enumerate-headings #er_diagrammen h3:before { content: '4.' counter(counter-er_diagrammen-2) '.' counter(counter-er_diagrammen-3) ' ' }
+                .print-site-enumerate-headings #er_diagrammen h3 {  counter-increment: counter-er_diagrammen-3 }
+            
+.print-site-enumerate-headings #sql_basis > h1:before { content: '5 ' }
+
+                .print-site-enumerate-headings #sql_basis h2:before { content: '5.' counter(counter-sql_basis-2) ' ' }
+                .print-site-enumerate-headings #sql_basis h2 {  counter-reset: counter-sql_basis-3 ;  counter-increment: counter-sql_basis-2 }
+            
+                .print-site-enumerate-headings #sql_basis h3:before { content: '5.' counter(counter-sql_basis-2) '.' counter(counter-sql_basis-3) ' ' }
+                .print-site-enumerate-headings #sql_basis h3 {  counter-increment: counter-sql_basis-3 }
+            
+.print-site-enumerate-headings #joins > h1:before { content: '6 ' }
+
+                .print-site-enumerate-headings #joins h2:before { content: '6.' counter(counter-joins-2) ' ' }
+                .print-site-enumerate-headings #joins h2 {  counter-reset: counter-joins-3 ;  counter-increment: counter-joins-2 }
+            
+                .print-site-enumerate-headings #joins h3:before { content: '6.' counter(counter-joins-2) '.' counter(counter-joins-3) ' ' }
+                .print-site-enumerate-headings #joins h3 {  counter-increment: counter-joins-3 }
+            
+.print-site-enumerate-headings #normalisatie > h1:before { content: '7 ' }
+
+                .print-site-enumerate-headings #normalisatie h2:before { content: '7.' counter(counter-normalisatie-2) ' ' }
+                .print-site-enumerate-headings #normalisatie h2 {  counter-reset: counter-normalisatie-3 ;  counter-increment: counter-normalisatie-2 }
+            
+                .print-site-enumerate-headings #normalisatie h3:before { content: '7.' counter(counter-normalisatie-2) '.' counter(counter-normalisatie-3) ' ' }
+                .print-site-enumerate-headings #normalisatie h3 {  counter-increment: counter-normalisatie-3 }
+            
+.print-site-enumerate-headings #indexen_performantie > h1:before { content: '8 ' }
+
+                .print-site-enumerate-headings #indexen_performantie h2:before { content: '8.' counter(counter-indexen_performantie-2) ' ' }
+                .print-site-enumerate-headings #indexen_performantie h2 {  counter-reset: counter-indexen_performantie-3 ;  counter-increment: counter-indexen_performantie-2 }
+            
+                .print-site-enumerate-headings #indexen_performantie h3:before { content: '8.' counter(counter-indexen_performantie-2) '.' counter(counter-indexen_performantie-3) ' ' }
+                .print-site-enumerate-headings #indexen_performantie h3 {  counter-increment: counter-indexen_performantie-3 }
+            
+.print-site-enumerate-headings #transacties > h1:before { content: '9 ' }
+
+                .print-site-enumerate-headings #transacties h2:before { content: '9.' counter(counter-transacties-2) ' ' }
+                .print-site-enumerate-headings #transacties h2 {  counter-reset: counter-transacties-3 ;  counter-increment: counter-transacties-2 }
+            
+                .print-site-enumerate-headings #transacties h3:before { content: '9.' counter(counter-transacties-2) '.' counter(counter-transacties-3) ' ' }
+                .print-site-enumerate-headings #transacties h3 {  counter-increment: counter-transacties-3 }
+            
+.print-site-enumerate-headings #praktijkcases > h1:before { content: '10 ' }
+
+                .print-site-enumerate-headings #praktijkcases h2:before { content: '10.' counter(counter-praktijkcases-2) ' ' }
+                .print-site-enumerate-headings #praktijkcases h2 {  counter-reset: counter-praktijkcases-3 ;  counter-increment: counter-praktijkcases-2 }
+            
+                .print-site-enumerate-headings #praktijkcases h3:before { content: '10.' counter(counter-praktijkcases-2) '.' counter(counter-praktijkcases-3) ' ' }
+                .print-site-enumerate-headings #praktijkcases h3 {  counter-increment: counter-praktijkcases-3 }
+            </style>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "/", "features": ["navigation.tabs", "navigation.tabs.sticky", "search.suggest", "search.highlight"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+        <script src="../js/print-site.js"></script>
+      
+    
+  </body>
+</html>
