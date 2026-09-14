@@ -1,11 +1,15 @@
 site_name: Cursus Databases
+site_description: Leren werken databases om perfomante informatiesystemen te bouwen
+site_author: Stijn Vercammen
 theme:
   name: material
-  features:
-    - navigation.tabs                 # bovenaan horizontale tabs i.p.v. enkel zijbalk
-    - navigation.tabs.sticky          # tabs blijven zichtbaar bij scrollen
-    - search.suggest                  # zoeksuggesties tijdens typen
-    - search.highlight                # zoekterm markeren in resultaten
+  palette:
+    - scheme: default
+      primary: indigo
+      accent: pink
+    - scheme: slate
+      primary: teal
+      accent: orange
 nav:
   - Home: index.md
   - Inleiding: inleiding.md
@@ -17,8 +21,17 @@ nav:
   - Indexen en performantie: indexen_performantie.md
   - Transacties: transacties.md
   - Praktijkcases: praktijkcases.md
+markdown_extensions:
+  - codehilite
+  - admonition
+  - toc
+  - pymdownx.superfences
+  - pymdownx.highlight
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.details
 plugins:
-  - search                            # zoekfunctie (deze staat standaard al aan, maar mag hier expliciet)
-  - print-site:
-      add_to_navigation: true         # voegt een "Afdrukken"-link toe aan de navigatie, zoals bij je collega
-      print_page_title: "Afdrukken"
+  - search
+  - print-site
+extra_css:
+  - overrides.css
