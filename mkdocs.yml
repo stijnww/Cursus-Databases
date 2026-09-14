@@ -3,6 +3,8 @@ site_description: Leren werken databases om perfomante informatiesystemen te bou
 site_author: Stijn Vercammen
 theme:
   name: material
+  icon:
+    logo: material/book-open-page-variant
   palette:
     - scheme: default
       primary: indigo

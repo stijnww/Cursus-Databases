@@ -1,17 +1,3 @@
-# Welcome to MkDocs
+# Welkom bij de cursus Databases
 
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).
-
-## Commands
-
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs -h` - Print help message and exit.
-
-## Project layout
-
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
+Deze website helpt je om databases te leren kennen, ontwerpen en gebruiken. In deze cursus bekijken we hoe je gegevens op een gestructureerde manier opslaat, hoe je die met SQL bevraagt en hoe je een goed databaseontwerp maakt. Kies een hoofdstuk in de navigatie om te starten!
