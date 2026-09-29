@@ -529,6 +529,56 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="ACID-eigenschappen">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#uitleg" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Uitleg
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#acid-in-een-oogopslag" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ACID in één oogopslag
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#praktisch-voorbeeld" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Praktisch voorbeeld
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#oefenopdrachten" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Oefenopdrachten
+      
+    </span>
+  </a>
+  
 </li>
       
     </ul>
@@ -612,6 +662,56 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="ACID-eigenschappen">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#uitleg" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Uitleg
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#acid-in-een-oogopslag" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ACID in één oogopslag
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#praktisch-voorbeeld" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Praktisch voorbeeld
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#oefenopdrachten" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Oefenopdrachten
+      
+    </span>
+  </a>
+  
 </li>
       
     </ul>
@@ -633,9 +733,54 @@
 
 <h1 id="transacties">Transacties</h1>
 <h2 id="wat-is-een-transactie">Wat is een transactie?</h2>
-<p><em>(Nog aan te vullen)</em></p>
+<p>Een transactie is een reeks databasebewerkingen die als één geheel uitgevoerd worden. Als één onderdeel van de transactie mislukt, dan worden de andere wijzigingen vaak ook teruggedraaid.</p>
+<p>Voorbeeld:</p>
+<div class="highlight"><pre><span></span><code><span class="k">BEGIN</span><span class="p">;</span>
+
+<span class="k">UPDATE</span><span class="w"> </span><span class="n">rekeningen</span><span class="w"> </span><span class="k">SET</span><span class="w"> </span><span class="n">saldo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">saldo</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">100</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">klant_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<span class="k">UPDATE</span><span class="w"> </span><span class="n">rekeningen</span><span class="w"> </span><span class="k">SET</span><span class="w"> </span><span class="n">saldo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">saldo</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">100</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">klant_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span>
+
+<span class="k">COMMIT</span><span class="p">;</span>
+</code></pre></div>
+<p>Als deze twee updates succesvol uitgevoerd worden, is de transactie afgerond. Als er iets fout gaat, kun je in plaats daarvan <code>ROLLBACK</code> gebruiken om alles terug te draaien.</p>
+<p>Transacties zijn belangrijk in situaties waar gegevens altijd consistent moeten blijven, bijvoorbeeld bij banktransacties of orderverwerking.</p>
 <h2 id="acid-eigenschappen">ACID-eigenschappen</h2>
-<p><em>(Nog aan te vullen)</em></p>
+<p>ACID staat voor:</p>
+<ul>
+<li>Atomicity: een transactie is volledig of helemaal niet.</li>
+<li>Consistency: de database blijft in een geldige toestand.</li>
+<li>Isolation: transacties kunnen gelijktijdig plaatsvinden zonder elkaar te verstoren.</li>
+<li>Durability: als een transactie is bevestigd, blijft deze ook bij een storing behouden.</li>
+</ul>
+<h3 id="uitleg">Uitleg</h3>
+<ul>
+<li>Atomicity: als een opdracht in de transactie faalt, wordt alles teruggedraaid.</li>
+<li>Consistency: de gegevensregels blijven geldig, zoals primaire sleutels en vreemde sleutels.</li>
+<li>Isolation: een andere transactie ziet de wijzigingen niet half afgerond.</li>
+<li>Durability: na <code>COMMIT</code> blijven de wijzigingen bewaard, zelfs bij crash of stroomuitval.</li>
+</ul>
+<blockquote>
+<p>ACID is een belangrijk concept in relationele databases omdat het zorgt voor betrouwbaarheid en veiligheid bij het verwerken van data.</p>
+</blockquote>
+<h2 id="acid-in-een-oogopslag">ACID in één oogopslag</h2>
+<ul>
+<li>Atomicity: alles of niets</li>
+<li>Consistency: database blijft geldig</li>
+<li>Isolation: transacties zijn gescheiden</li>
+<li>Durability: bevestigde wijzigingen blijven staan</li>
+</ul>
+<h2 id="praktisch-voorbeeld">Praktisch voorbeeld</h2>
+<div class="highlight"><pre><span></span><code><span class="k">BEGIN</span><span class="p">;</span>
+<span class="k">UPDATE</span><span class="w"> </span><span class="n">rekeningen</span><span class="w"> </span><span class="k">SET</span><span class="w"> </span><span class="n">saldo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">saldo</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">100</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">klant_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<span class="k">UPDATE</span><span class="w"> </span><span class="n">rekeningen</span><span class="w"> </span><span class="k">SET</span><span class="w"> </span><span class="n">saldo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">saldo</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">100</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">klant_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span>
+<span class="k">COMMIT</span><span class="p">;</span>
+</code></pre></div>
+<p>Als één update mislukt, gebruik je <code>ROLLBACK</code> om beide wijzigingen terug te draaien.</p>
+<h2 id="oefenopdrachten">Oefenopdrachten</h2>
+<ol>
+<li>Leg uit waarom een banktransactie als een transactie in SQL moet worden uitgevoerd. Wat gebeurt er als één van de twee updates faalt?</li>
+<li>Noem de vier ACID-eigenschappen en geef voor elk een kort voorbeeld uit de praktijk.</li>
+</ol>
 
 
 

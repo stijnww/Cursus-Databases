@@ -499,6 +499,50 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#samenvatting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Samenvatting
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#snel-overzicht" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Snel overzicht
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tip" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tip
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#oefenopdrachten" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Oefenopdrachten
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -658,6 +702,50 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#samenvatting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Samenvatting
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#snel-overzicht" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Snel overzicht
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tip" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tip
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#oefenopdrachten" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Oefenopdrachten
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -677,13 +765,103 @@
 
 <h1 id="normalisatie">Normalisatie</h1>
 <h2 id="waarom-normaliseren">Waarom normaliseren?</h2>
-<p><em>(Nog aan te vullen)</em></p>
+<p>Normalisatie is het organiseren van gegevens in een database zodat redundantie wordt verminderd en de consistentie wordt verbeterd. Met andere woorden: je wilt voorkomen dat dezelfde informatie meerdere keren in verschillende tabellen verschijnt.</p>
+<p>Een ongeorganiseerde database kan leiden tot:</p>
+<ul>
+<li>dubbele informatie;</li>
+<li>inconsistenties;</li>
+<li>meer onderhoud nodig bij wijzigingen;</li>
+<li>moeilijkere queries en analyses.</li>
+</ul>
+<p>Door normalisatie te gebruiken, verdeel je gegevens logisch over passende tabellen. Daardoor wordt de database overzichtelijker en beter te onderhouden.</p>
 <h2 id="eerste-normaalvorm-1nf">Eerste normaalvorm (1NF)</h2>
-<p><em>(Nog aan te vullen)</em></p>
+<p>Een tabel is in de eerste normaalvorm als:</p>
+<ul>
+<li>elke kolom een enkelvoudige waarde bevat;</li>
+<li>er geen herhaalde groepen aanwezig zijn;</li>
+<li>elke rij uniek identificeerbaar is.</li>
+</ul>
+<p>Voorbeeld van een tabel die niet voldoet aan 1NF:</p>
+<table>
+<thead>
+<tr>
+<th>klant_id</th>
+<th>naam</th>
+<th>hobby's</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Anna</td>
+<td>tennis, zwemmen</td>
+</tr>
+</tbody>
+</table>
+<p>Hier staat meerdere informatie in één veld (<code>hobby's</code>). In 1NF zou je dit opsplitsen in meerdere records of een aparte tabel.</p>
 <h2 id="tweede-normaalvorm-2nf">Tweede normaalvorm (2NF)</h2>
-<p><em>(Nog aan te vullen)</em></p>
+<p>Een tabel is in de tweede normaalvorm als:</p>
+<ul>
+<li>deze voldoet aan 1NF;</li>
+<li>alle niet-sleutelvelden volledig afhankelijk zijn van de primaire sleutel.</li>
+</ul>
+<p>Dit is vooral relevant als een tabel een samengestelde sleutel heeft. Als een veld alleen afhankelijk is van een deel van die sleutel, is er sprake van overbodige gegevens.</p>
+<p>Voorbeeld:</p>
+<p>Een orderregel tabel bevat <code>order_id</code>, <code>product_id</code>, <code>product_naam</code> en <code>prijs</code>. Hier hangt <code>product_naam</code> alleen af van <code>product_id</code>, niet van <code>order_id</code>. Dat is een teken dat de structuur nog niet optimaal is.</p>
 <h2 id="derde-normaalvorm-3nf">Derde normaalvorm (3NF)</h2>
-<p><em>(Nog aan te vullen)</em></p>
+<p>Een tabel is in de derde normaalvorm als:</p>
+<ul>
+<li>deze voldoet aan 2NF;</li>
+<li>geen niet-sleutelveld afhankelijk is van een ander niet-sleutelveld.</li>
+</ul>
+<p>Met andere woorden: je mag geen informatie opslaan die eigenlijk al ergens anders in de database staat en afgeleid kan worden uit andere velden.</p>
+<p>Voorbeeld:</p>
+<p>Als je in een klantenbestand zowel <code>stad</code> als <code>postcode</code> opslaat, en <code>stad</code> af te leiden is uit <code>postcode</code>, dan is dat geen goede normalisatie. Je bewaart dan informatie die niet onafhankelijk is.</p>
+<h2 id="samenvatting">Samenvatting</h2>
+<p>Normalisatie helpt bij:</p>
+<ul>
+<li>minder redundantie;</li>
+<li>betere data-integriteit;</li>
+<li>eenvoudigere onderhoudbaarheid;</li>
+<li>duidelijkere structuur.</li>
+</ul>
+<blockquote>
+<p>De kernidee is dat elke informatie op één logische plaats wordt opgeslagen, in plaats van meerdere keren in de database te herhalen.</p>
+</blockquote>
+<h2 id="snel-overzicht">Snel overzicht</h2>
+<table>
+<thead>
+<tr>
+<th>Normaalvorm</th>
+<th>Doel</th>
+<th>Denk aan</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1NF</td>
+<td>Geen herhaalde groepen</td>
+<td>Eén waarde per veld</td>
+</tr>
+<tr>
+<td>2NF</td>
+<td>Geen afhankelijkheid van een deel van een samengestelde sleutel</td>
+<td>Logische onderverdeling</td>
+</tr>
+<tr>
+<td>3NF</td>
+<td>Geen afhankelijke niet-sleutelvelden</td>
+<td>Geen overbodige informatie</td>
+</tr>
+</tbody>
+</table>
+<h2 id="tip">Tip</h2>
+<p>Normalisatie is niet bedoeld om de database ingewikkelder te maken, maar om de data juist en logisch te houden.</p>
+<h2 id="oefenopdrachten">Oefenopdrachten</h2>
+<ol>
+<li>Noem twee redenen waarom normalisatie belangrijk is bij het ontwerpen van een database. Geef een voorbeeld van een probleem dat ontstaat zonder normalisatie.</li>
+<li>Bekijk een tabel met <code>klant_id</code>, <code>klant_naam</code>, <code>postcode</code> en <code>stad</code>. Leg uit waarom deze tabel mogelijk niet voldoet aan de derde normaalvorm.</li>
+</ol>
 
 
 

@@ -445,6 +445,50 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#samenvatting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Samenvatting
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#in-een-oogopslag" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        In één oogopslag
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#snel-overzicht" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Snel overzicht
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#oefenopdrachten" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Oefenopdrachten
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -658,6 +702,50 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#samenvatting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Samenvatting
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#in-een-oogopslag" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        In één oogopslag
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#snel-overzicht" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Snel overzicht
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#oefenopdrachten" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Oefenopdrachten
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -677,13 +765,106 @@
 
 <h1 id="sql-basis">SQL basis</h1>
 <h2 id="select">SELECT</h2>
-<p><em>(Nog aan te vullen)</em></p>
+<p><code>SELECT</code> wordt gebruikt om gegevens uit een database op te halen. Het is waarschijnlijk het meest gebruikte SQL-commando.</p>
+<p>Basisvoorbeeld:</p>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">klanten</span><span class="p">;</span>
+</code></pre></div>
+<p>Deze query geeft alle kolommen en alle rijen uit de tabel <code>klanten</code> terug.</p>
+<p>Als je alleen bepaalde kolommen wilt zien:</p>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">naam</span><span class="p">,</span><span class="w"> </span><span class="n">email</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">klanten</span><span class="p">;</span>
+</code></pre></div>
+<p>Je kunt ook voorwaarden toevoegen met <code>WHERE</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">naam</span><span class="p">,</span><span class="w"> </span><span class="n">email</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">klanten</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">klant_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+</code></pre></div>
+<p>Met <code>ORDER BY</code> kun je resultaten sorteren:</p>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">naam</span><span class="p">,</span><span class="w"> </span><span class="n">email</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">klanten</span>
+<span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">naam</span><span class="w"> </span><span class="k">ASC</span><span class="p">;</span>
+</code></pre></div>
 <h2 id="insert">INSERT</h2>
-<p><em>(Nog aan te vullen)</em></p>
+<p><code>INSERT</code> wordt gebruikt om nieuwe records aan een tabel toe te voegen.</p>
+<p>Basisvoorbeeld:</p>
+<div class="highlight"><pre><span></span><code><span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">klanten</span><span class="w"> </span><span class="p">(</span><span class="n">naam</span><span class="p">,</span><span class="w"> </span><span class="n">email</span><span class="p">)</span>
+<span class="k">VALUES</span><span class="w"> </span><span class="p">(</span><span class="s1">'Anna'</span><span class="p">,</span><span class="w"> </span><span class="s1">'anna@example.com'</span><span class="p">);</span>
+</code></pre></div>
+<p>Je kunt meerdere records tegelijk invoegen:</p>
+<div class="highlight"><pre><span></span><code><span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">klanten</span><span class="w"> </span><span class="p">(</span><span class="n">naam</span><span class="p">,</span><span class="w"> </span><span class="n">email</span><span class="p">)</span>
+<span class="k">VALUES</span>
+<span class="w">    </span><span class="p">(</span><span class="s1">'Bob'</span><span class="p">,</span><span class="w"> </span><span class="s1">'bob@example.com'</span><span class="p">),</span>
+<span class="w">    </span><span class="p">(</span><span class="s1">'Celine'</span><span class="p">,</span><span class="w"> </span><span class="s1">'celine@example.com'</span><span class="p">);</span>
+</code></pre></div>
 <h2 id="update">UPDATE</h2>
-<p><em>(Nog aan te vullen)</em></p>
+<p><code>UPDATE</code> wordt gebruikt om bestaande gegevens te wijzigen.</p>
+<p>Voorbeeld:</p>
+<div class="highlight"><pre><span></span><code><span class="k">UPDATE</span><span class="w"> </span><span class="n">klanten</span>
+<span class="k">SET</span><span class="w"> </span><span class="n">email</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'nieuw@email.com'</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">klant_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+</code></pre></div>
+<p>Hierbij wordt alleen de klant met <code>klant_id = 1</code> aangepast. Zonder <code>WHERE</code> zouden alle records worden gewijzigd.</p>
 <h2 id="delete">DELETE</h2>
-<p><em>(Nog aan te vullen)</em></p>
+<p><code>DELETE</code> wordt gebruikt om records uit een tabel te verwijderen.</p>
+<p>Voorbeeld:</p>
+<div class="highlight"><pre><span></span><code><span class="k">DELETE</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">klanten</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">klant_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+</code></pre></div>
+<p>Let op: ook hier is <code>WHERE</code> belangrijk. Zonder <code>WHERE</code> zouden alle gegevens uit de tabel worden verwijderd.</p>
+<h2 id="samenvatting">Samenvatting</h2>
+<p>De basisbewerkingen in SQL zijn:</p>
+<ul>
+<li><code>SELECT</code>: gegevens lezen</li>
+<li><code>INSERT</code>: gegevens toevoegen</li>
+<li><code>UPDATE</code>: gegevens aanpassen</li>
+<li><code>DELETE</code>: gegevens verwijderen</li>
+</ul>
+<p>Deze vier opdrachten vormen de kern van het werken met relationele databases.</p>
+<h2 id="in-een-oogopslag">In één oogopslag</h2>
+<ul>
+<li><code>SELECT</code> = lees gegevens</li>
+<li><code>INSERT</code> = voeg gegevens toe</li>
+<li><code>UPDATE</code> = wijzig gegevens</li>
+<li><code>DELETE</code> = verwijder gegevens</li>
+</ul>
+<h2 id="snel-overzicht">Snel overzicht</h2>
+<table>
+<thead>
+<tr>
+<th>Commando</th>
+<th>Doel</th>
+<th>Voorbeeld</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>SELECT</code></td>
+<td>Gegevens ophalen</td>
+<td><code>SELECT * FROM klanten;</code></td>
+</tr>
+<tr>
+<td><code>INSERT</code></td>
+<td>Nieuwe gegevens toevoegen</td>
+<td><code>INSERT INTO klanten ...</code></td>
+</tr>
+<tr>
+<td><code>UPDATE</code></td>
+<td>Bestaande gegevens aanpassen</td>
+<td><code>UPDATE klanten SET ...</code></td>
+</tr>
+<tr>
+<td><code>DELETE</code></td>
+<td>Gegevens verwijderen</td>
+<td><code>DELETE FROM klanten WHERE ...</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="oefenopdrachten">Oefenopdrachten</h2>
+<ol>
+<li>Schrijf een query die van alle klanten alleen de naam en e-mailadres toont, gesorteerd op naam van A tot Z.</li>
+<li>Voeg twee nieuwe klanten toe aan de tabel <code>klanten</code> en wijzig daarna het e-mailadres van één van die klanten. Verwijder daarna de klant die je als tweede hebt toegevoegd.</li>
+</ol>
 
 
 

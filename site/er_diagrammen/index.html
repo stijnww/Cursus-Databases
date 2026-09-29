@@ -407,6 +407,56 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#in-een-oogopslag" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        In één oogopslag
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="In één oogopslag">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mini-voorbeeld" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mini-voorbeeld
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#visuele-gedachtegang" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Visuele gedachtegang
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#oefenopdrachten" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Oefenopdrachten
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -636,6 +686,56 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#in-een-oogopslag" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        In één oogopslag
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="In één oogopslag">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mini-voorbeeld" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mini-voorbeeld
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#visuele-gedachtegang" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Visuele gedachtegang
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#oefenopdrachten" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Oefenopdrachten
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -655,11 +755,78 @@
 
 <h1 id="er-diagrammen">ER-diagrammen</h1>
 <h2 id="entiteiten-en-attributen">Entiteiten en attributen</h2>
-<p><em>(Nog aan te vullen)</em></p>
+<p>Een ER-diagram (Entity-Relationship diagram) is een visuele manier om een database te modelleren. Het laat zien welke soorten gegevens er zijn en hoe deze met elkaar samenhangen.</p>
+<p>Belangrijkste begrippen:</p>
+<ul>
+<li>entiteit: een object of concept uit de werkelijkheid, zoals <code>klant</code>, <code>product</code> of <code>bestelling</code>;</li>
+<li>attribuut: een eigenschap van een entiteit, zoals <code>naam</code>, <code>email</code> of <code>prijs</code>;</li>
+<li>relatie: de verbinding tussen entiteiten.</li>
+</ul>
+<p>Voorbeeld:</p>
+<ul>
+<li>Entiteit: <code>Klant</code></li>
+<li>klant_id</li>
+<li>naam</li>
+<li>email</li>
+<li>Entiteit: <code>Bestelling</code></li>
+<li>bestel_id</li>
+<li>datum</li>
+<li>totaal</li>
+</ul>
+<p>Deze entiteiten zijn niet zomaar los van elkaar; ze hebben een betekenisvolle relatie: een klant plaatst een bestelling.</p>
 <h2 id="relaties-tussen-entiteiten">Relaties tussen entiteiten</h2>
-<p><em>(Nog aan te vullen)</em></p>
+<p>Relaties beschrijven hoe twee entiteiten met elkaar verbonden zijn. Hierbij kun je denken aan:</p>
+<ul>
+<li>één-op-veel;</li>
+<li>veel-op-veel;</li>
+<li>één-op-één.</li>
+</ul>
+<p>Voorbeeld:</p>
+<ul>
+<li>één klant kan meerdere bestellingen plaatsen;</li>
+<li>elke bestelling hoort bij één klant.</li>
+</ul>
+<p>Dus de relatie tussen <code>Klant</code> en <code>Bestelling</code> is een één-op-veel-relatie.</p>
+<p>ER-diagrammen maken dit inzichtelijk zonder dat je meteen te maken hebt met SQL of technische details.</p>
 <h2 id="cardinaliteit">Cardinaliteit</h2>
-<p><em>(Nog aan te vullen)</em></p>
+<p>Cardinaliteit beschrijft hoeveel records van de ene entiteit kunnen samenhangen met hoeveel records van een andere entiteit.</p>
+<p>Voorbeelden:</p>
+<ul>
+<li>één-op-één: één student heeft één studentnummer;</li>
+<li>één-op-veel: één docent geeft les aan meerdere studenten;</li>
+<li>veel-op-veel: meerdere studenten volgen meerdere cursussen.</li>
+</ul>
+<p>Bij ER-modelleren wordt cardinaliteit vaak weergegeven met symbolen die aangeven hoeveel exemplaren er maximaal aan elkaar gekoppeld kunnen zijn.</p>
+<p>Dit is belangrijk omdat de juiste relaties bepalen hoe je de tabellen in een database gaat structureren.</p>
+<blockquote>
+<p>Een ER-diagram is een blauwdruk voor de database: het laat zien wat de data betekent en hoe de verschillende delen van het model met elkaar verbonden zijn.</p>
+</blockquote>
+<h2 id="in-een-oogopslag">In één oogopslag</h2>
+<ul>
+<li>Entiteit = object of concept</li>
+<li>Attribuut = eigenschap van een entiteit</li>
+<li>Relatie = verband tussen entiteiten</li>
+<li>Cardinaliteit = hoeveel records ermee samenhangen</li>
+</ul>
+<h3 id="mini-voorbeeld">Mini-voorbeeld</h3>
+<ul>
+<li>Klant</li>
+<li>klant_id</li>
+<li>naam</li>
+<li>email</li>
+<li>Bestelling</li>
+<li>bestel_id</li>
+<li>datum</li>
+<li>totaal</li>
+</ul>
+<p>Relatie: één klant kan meerdere bestellingen plaatsen.</p>
+<h2 id="visuele-gedachtegang">Visuele gedachtegang</h2>
+<p>Voordat je SQL schrijft, moet je eerst begrijpen wat de echte gegevens zijn en hoe ze samenhangen. Een ER-diagram helpt je dat te zien zonder direct in SQL te denken.</p>
+<h2 id="oefenopdrachten">Oefenopdrachten</h2>
+<ol>
+<li>Teken of beschrijf een ER-diagram voor een winkel met de entiteiten <code>klant</code>, <code>bestelling</code> en <code>product</code>. Geef aan welke relaties er zijn.</li>
+<li>Wat is het verschil tussen een entiteit en een attribuut? Geef voor beide een voorbeeld uit een schooldatabase.</li>
+</ol>
 
 
 

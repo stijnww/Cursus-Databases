@@ -461,6 +461,50 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#wanneer-gebruik-je-welke-join" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Wanneer gebruik je welke join?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#snel-vergelijken" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Snel vergelijken
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#denk-aan-het-voorbeeld" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Denk aan het voorbeeld
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#oefenopdrachten" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Oefenopdrachten
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -636,6 +680,50 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#wanneer-gebruik-je-welke-join" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Wanneer gebruik je welke join?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#snel-vergelijken" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Snel vergelijken
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#denk-aan-het-voorbeeld" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Denk aan het voorbeeld
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#oefenopdrachten" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Oefenopdrachten
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -655,11 +743,73 @@
 
 <h1 id="joins">Joins</h1>
 <h2 id="inner-join">INNER JOIN</h2>
-<p><em>(Nog aan te vullen)</em></p>
+<p>Een <code>INNER JOIN</code> retourneert alleen de records die aan beide tabellen voldoen. Met andere woorden: je krijgt alleen de combinaties die bestaan in beide tabellen.</p>
+<p>Voorbeeld:</p>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">klanten</span><span class="p">.</span><span class="n">naam</span><span class="p">,</span><span class="w"> </span><span class="n">bestellingen</span><span class="p">.</span><span class="n">bestel_id</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">klanten</span>
+<span class="k">INNER</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">bestellingen</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">klanten</span><span class="p">.</span><span class="n">klant_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">bestellingen</span><span class="p">.</span><span class="n">klant_id</span><span class="p">;</span>
+</code></pre></div>
+<p>Deze query laat alleen klanten zien die daadwerkelijk een bestelling hebben geplaatst.</p>
 <h2 id="left-join">LEFT JOIN</h2>
-<p><em>(Nog aan te vullen)</em></p>
+<p>Een <code>LEFT JOIN</code> geeft alle records uit de linker tabel terug, zelfs als er geen overeenkomst in de rechter tabel bestaat. De rechter waarden zijn dan <code>NULL</code>.</p>
+<p>Voorbeeld:</p>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">klanten</span><span class="p">.</span><span class="n">naam</span><span class="p">,</span><span class="w"> </span><span class="n">bestellingen</span><span class="p">.</span><span class="n">bestel_id</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">klanten</span>
+<span class="k">LEFT</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">bestellingen</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">klanten</span><span class="p">.</span><span class="n">klant_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">bestellingen</span><span class="p">.</span><span class="n">klant_id</span><span class="p">;</span>
+</code></pre></div>
+<p>Hier zie je alle klanten, ook die nog geen bestelling hebben gedaan.</p>
 <h2 id="right-join">RIGHT JOIN</h2>
-<p><em>(Nog aan te vullen)</em></p>
+<p>Een <code>RIGHT JOIN</code> werkt precies andersom: alle records uit de rechter tabel worden getoond, zelfs als er geen overeenkomst in de linker tabel is.</p>
+<p>Voorbeeld:</p>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">klanten</span><span class="p">.</span><span class="n">naam</span><span class="p">,</span><span class="w"> </span><span class="n">bestellingen</span><span class="p">.</span><span class="n">bestel_id</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">klanten</span>
+<span class="k">RIGHT</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">bestellingen</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">klanten</span><span class="p">.</span><span class="n">klant_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">bestellingen</span><span class="p">.</span><span class="n">klant_id</span><span class="p">;</span>
+</code></pre></div>
+<p>Deze query toont alle bestellingen, zelfs als er geen klantrecord gekoppeld is.</p>
+<h2 id="wanneer-gebruik-je-welke-join">Wanneer gebruik je welke join?</h2>
+<ul>
+<li><code>INNER JOIN</code>: alleen overeenkomende gegevens</li>
+<li><code>LEFT JOIN</code>: alles uit de linker tabel + overeenkomende gegevens uit de rechter tabel</li>
+<li><code>RIGHT JOIN</code>: alles uit de rechter tabel + overeenkomende gegevens uit de linker tabel</li>
+</ul>
+<blockquote>
+<p>Joins zijn essentieel in relationele databases, omdat ze gegevens uit verschillende tabellen combineren op basis van hun relatie.</p>
+</blockquote>
+<h2 id="snel-vergelijken">Snel vergelijken</h2>
+<table>
+<thead>
+<tr>
+<th>Join-type</th>
+<th>Wat krijg je terug?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>INNER JOIN</code></td>
+<td>Alleen records die in beide tabellen voorkomen</td>
+</tr>
+<tr>
+<td><code>LEFT JOIN</code></td>
+<td>Alle records uit de linker tabel, ook zonder match</td>
+</tr>
+<tr>
+<td><code>RIGHT JOIN</code></td>
+<td>Alle records uit de rechter tabel, ook zonder match</td>
+</tr>
+</tbody>
+</table>
+<h2 id="denk-aan-het-voorbeeld">Denk aan het voorbeeld</h2>
+<ul>
+<li><code>klanten</code> is de linker tabel</li>
+<li><code>bestellingen</code> is de rechter tabel</li>
+<li>de join gebeurt op <code>klant_id</code></li>
+</ul>
+<p>Als je wilt weten welke klanten bestellingen hebben, gebruik je meestal een <code>LEFT JOIN</code> of <code>INNER JOIN</code>.</p>
+<h2 id="oefenopdrachten">Oefenopdrachten</h2>
+<ol>
+<li>Schrijf een query met een <code>INNER JOIN</code> die alle klanten toont samen met hun bestellingen.</li>
+<li>Geef aan welk type join je gebruikt als je alle klanten wilt tonen, ook als ze nog geen bestelling hebben gemaakt. Waarom is dat handig?</li>
+</ol>
 
 
 
