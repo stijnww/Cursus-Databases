@@ -662,54 +662,653 @@
 <p>Deze website helpt je om databases te leren kennen, ontwerpen en gebruiken. In deze cursus bekijken we hoe je gegevens op een gestructureerde manier opslaat, hoe je die met SQL bevraagt en hoe je een goed databaseontwerp maakt. Kies een hoofdstuk in de navigatie om te starten!</p>
 <p><img alt="Database design and optimization" src="../assets/images/database-design-optimization.jpg" /></p></section><section class="print-page" id="inleiding" heading-number="2"><h1 id="inleiding-inleiding">Inleiding</h1>
 <h2 id="inleiding-wat-is-een-database">Wat is een database?</h2>
-<p><em>(Nog aan te vullen)</em></p>
+<p>Een database is een gestructureerde verzameling van gegevens die centraal wordt opgeslagen, beheerd en opgevraagd. In plaats van informatie verspreid over verschillende bestanden, Excel-sheets of papieren formulieren te bewaren, zet je die gegevens in een database. Zo kun je ze snel en betrouwbaar opzoeken, aanpassen en analyseren.</p>
+<p>Bij een database worden gegevens meestal georganiseerd in tabellen. Elke tabel bestaat uit rijen en kolommen:</p>
+<ul>
+<li>Een rij is een record: één compleet gegevenselement, bijvoorbeeld één klant of één bestelling.</li>
+<li>Een kolom is een veld: een eigenschap zoals naam, e-mailadres of datum.</li>
+<li>Een primaire sleutel is een uniek identificatienummer of veld dat elke rij in een tabel onderscheidt.</li>
+<li>Een relatie beschrijft hoe verschillende tabellen aan elkaar gekoppeld zijn.</li>
+</ul>
+<p>Een eenvoudig voorbeeld:</p>
+<ul>
+<li>Tabel: klanten</li>
+<li>klant_id</li>
+<li>naam</li>
+<li>email</li>
+<li>Tabel: bestellingen</li>
+<li>bestel_id</li>
+<li>klant_id</li>
+<li>datum</li>
+<li>totaal</li>
+</ul>
+<p>Hiermee kun je bijvoorbeeld zien welke klant een bepaalde bestelling heeft geplaatst. Dat is precies waar databases goed in zijn: verbanden tussen gegevens vastleggen en op een gecontroleerde manier beheren.</p>
 <h2 id="inleiding-waarom-gebruiken-we-databases">Waarom gebruiken we databases?</h2>
-<p><em>(Nog aan te vullen)</em></p>
+<p>Databases worden gebruikt omdat ze veel voordelen bieden boven het handmatig bewaren van gegevens in losse documenten of spreadsheets.</p>
+<h3 id="inleiding-belangrijkste-voordelen">Belangrijkste voordelen</h3>
+<ul>
+<li>Snel zoeken en ophalen van gegevens</li>
+<li>Eenvoudig opslaan van grote hoeveelheden informatie</li>
+<li>Controle op consistentie en volledigheid van gegevens</li>
+<li>Meerdere gebruikers kunnen tegelijk toegang krijgen tot dezelfde gegevens</li>
+<li>Betere beveiliging en toegangscontrole</li>
+<li>Back-up en herstel van gegevens bij storingen</li>
+<li>Reproduceerbare en gecontroleerde manipulatie van data via queries</li>
+</ul>
+<p>Stel je voor dat een winkel honderden klanten, producten en bestellingen heeft. Zonder database zou je al die informatie handmatig moeten bijhouden, met veel kans op fouten, duplicaten en onoverzichtelijkheid. Een database maakt dit veel efficiënter en betrouwbaarder.</p>
+<p>Databases zijn dus niet alleen voor grote bedrijven. Ze worden ook gebruikt in scholen, ziekenhuizen, webshops, mobiele apps, boekhoudsystemen en veel andere toepassingen.</p>
 <h2 id="inleiding-soorten-databases">Soorten databases</h2>
-<p><em>(Nog aan te vullen)</em></p></section><section class="print-page" id="relationele_modellen" heading-number="3"><h1 id="relationele_modellen-relationele-modellen">Relationele modellen</h1>
+<p>Er bestaan verschillende soorten databases, afhankelijk van het soort gegevens en het doel waarvoor ze gebruikt worden.</p>
+<h3 id="inleiding-1-relationele-databases">1. Relationele databases</h3>
+<p>Dit is het meest gebruikte type database in bedrijfstoepassingen. De gegevens worden opgeslagen in tabellen met duidelijke verbanden tussen elkaar.</p>
+<p>Kenmerken:</p>
+<ul>
+<li>Structuur in tabellen en relaties</li>
+<li>Gebruikt SQL (Structured Query Language)</li>
+<li>Sterk geschikt voor gestructureerde gegevens</li>
+<li>Voorbeelden: MySQL, PostgreSQL, SQL Server, Oracle</li>
+</ul>
+<p>Voorbeeld: een klantenbestand, voorraadbeheer of een boekhoudsysteem.</p>
+<h3 id="inleiding-2-nosql-databases">2. NoSQL-databases</h3>
+<p>NoSQL-databases zijn ontworpen voor grote hoeveelheden data en minder strikt gestructureerde informatie. Ze worden vaak gebruikt bij webservices, realtime apps en grote datameren.</p>
+<p>Kenmerken:</p>
+<ul>
+<li>Flexibelere opslag van gegevens</li>
+<li>Niet noodzakelijk in tabellen zoals bij relationele databases</li>
+<li>Vaak gebruikt voor documenten, sleutel-waardeparen of grafieken</li>
+<li>Voorbeelden: MongoDB, Redis, Cassandra</li>
+</ul>
+<h3 id="inleiding-3-andere-soorten-databases">3. Andere soorten databases</h3>
+<p>Er zijn ook databases die speciaal zijn gemaakt voor specifieke doelen, zoals:</p>
+<ul>
+<li>Objectgeoriënteerde databases</li>
+<li>Grafdatabases voor netwerken en relaties</li>
+<li>Tijdreeksdatabases voor metingen en logs</li>
+<li>In-memory databases voor zeer snelle verwerking</li>
+</ul>
+<h2 id="inleiding-wat-gaan-we-in-deze-cursus-leren">Wat gaan we in deze cursus leren?</h2>
+<p>In deze cursus focussen we ons vooral op relationele databases en SQL. Je leert onder andere:</p>
+<ul>
+<li>hoe databases zijn opgebouwd;</li>
+<li>hoe je tabellen en relaties modelleert;</li>
+<li>hoe je gegevens opvraagt met SQL;</li>
+<li>hoe je data toevoegt, wijzigt en verwijdert;</li>
+<li>hoe je transacties, indexen en normalisatie begrijpt.</li>
+</ul>
+<p>Databases vormen de basis van veel moderne softwareapplicaties. Als je begrijpt hoe gegevens worden opgeslagen en opgehaald, kun je beter werken met applicaties, rapportages, analyses en softwareontwikkeling in het algemeen.</p>
+<blockquote>
+<p>In deze cursus gaan we vooral dieper in op relationele databases, omdat deze het meest gebruikt worden in bedrijfssystemen en softwareontwikkeling.</p>
+</blockquote>
+<h2 id="inleiding-leerdoel">Leerdoel</h2>
+<p>Aan het einde van dit hoofdstuk kun je:</p>
+<ul>
+<li>uitleggen wat een database is;</li>
+<li>benoemen waarom databases belangrijk zijn;</li>
+<li>onderscheid maken tussen verschillende soorten databases;</li>
+<li>een eenvoudig voorbeeld van tabellen en relaties herkennen.</li>
+</ul>
+<h2 id="inleiding-kernbegrippen">Kernbegrippen</h2>
+<ul>
+<li>Database: een georganiseerde verzameling van gegevens</li>
+<li>Tabel: een verzameling records met dezelfde structuur</li>
+<li>Rij: één record of één item</li>
+<li>Kolom: één eigenschap van een record</li>
+<li>Relatie: een verband tussen tabellen</li>
+</ul>
+<h2 id="inleiding-belangrijk-om-te-onthouden">Belangrijk om te onthouden</h2>
+<ul>
+<li>Gegevens moeten logisch opgeslagen worden.</li>
+<li>Herhaling van data kost ruimte en kan fouten veroorzaken.</li>
+<li>Relaties maken een database veel krachtiger dan losse bestanden.</li>
+</ul>
+<h2 id="inleiding-oefenopdrachten">Oefenopdrachten</h2>
+<ol>
+<li>Noem drie redenen waarom een bedrijf een database gebruikt in plaats van gegevens in Excel of losse bestanden op te slaan.</li>
+<li>Leg in je eigen woorden uit wat het verschil is tussen een tabel, een rij en een kolom. Geef daarbij een concreet voorbeeld met klanten en bestellingen.</li>
+</ol></section><section class="print-page" id="relationele_modellen" heading-number="3"><h1 id="relationele_modellen-relationele-modellen">Relationele modellen</h1>
 <h2 id="relationele_modellen-tabellen-rijen-en-kolommen">Tabellen, rijen en kolommen</h2>
-<p><em>(Nog aan te vullen)</em></p>
+<p>Een relationeel model is een manier om data te organiseren in tabellen. Elke tabel vertegenwoordigt een bepaald soort informatie, zoals klanten, producten of bestellingen.</p>
+<p>Een tabel bestaat uit:</p>
+<ul>
+<li>kolommen: de eigenschappen van de gegevens;</li>
+<li>rijen: de individuele records;</li>
+<li>een duidelijke naam en structuur.</li>
+</ul>
+<p>Voorbeeld:</p>
+<div class="highlight"><pre><span></span><code><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">klanten</span><span class="w"> </span><span class="p">(</span>
+<span class="w">    </span><span class="n">klant_id</span><span class="w"> </span><span class="nb">INT</span><span class="p">,</span>
+<span class="w">    </span><span class="n">naam</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">100</span><span class="p">),</span>
+<span class="w">    </span><span class="n">email</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
+<span class="p">);</span>
+</code></pre></div>
+<p>Hierbij is:</p>
+<ul>
+<li><code>klant_id</code> een kolom;</li>
+<li>een specifieke klant een rij;</li>
+<li><code>naam</code> en <code>email</code> eigenschappen van die klant.</li>
+</ul>
+<p>Het grote voordeel van relationele modellen is dat gegevens logisch georganiseerd worden, waardoor ze beter te beheren, op te vragen en te koppelen zijn.</p>
 <h2 id="relationele_modellen-primaire-sleutels">Primaire sleutels</h2>
-<p><em>(Nog aan te vullen)</em></p>
+<p>Een primaire sleutel is een kolom of combinatie van kolommen die elke rij in een tabel uniek maakt. Hiermee kun je elke record precies identificeren.</p>
+<p>Voorbeeld:</p>
+<div class="highlight"><pre><span></span><code><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">klanten</span><span class="w"> </span><span class="p">(</span>
+<span class="w">    </span><span class="n">klant_id</span><span class="w"> </span><span class="nb">INT</span><span class="w"> </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="p">,</span>
+<span class="w">    </span><span class="n">naam</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">100</span><span class="p">),</span>
+<span class="w">    </span><span class="n">email</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
+<span class="p">);</span>
+</code></pre></div>
+<p>Hier is <code>klant_id</code> de primaire sleutel. Geen twee klanten kunnen dezelfde <code>klant_id</code> hebben.</p>
+<p>Waarom is dit belangrijk?</p>
+<ul>
+<li>Je kunt één record uniek terugvinden.</li>
+<li>Je voorkomt dubbele gegevens.</li>
+<li>Je kunt andere tabellen verwijzen naar dezelfde rij.</li>
+</ul>
 <h2 id="relationele_modellen-vreemde-sleutels">Vreemde sleutels</h2>
-<p><em>(Nog aan te vullen)</em></p></section><section class="print-page" id="er_diagrammen" heading-number="4"><h1 id="er_diagrammen-er-diagrammen">ER-diagrammen</h1>
+<p>Een vreemde sleutel is een kolom in een tabel die verwijst naar de primaire sleutel van een andere tabel. Hiermee leg je relaties tussen tabellen vast.</p>
+<p>Voorbeeld:</p>
+<div class="highlight"><pre><span></span><code><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">bestellingen</span><span class="w"> </span><span class="p">(</span>
+<span class="w">    </span><span class="n">bestel_id</span><span class="w"> </span><span class="nb">INT</span><span class="w"> </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="p">,</span>
+<span class="w">    </span><span class="n">klant_id</span><span class="w"> </span><span class="nb">INT</span><span class="p">,</span>
+<span class="w">    </span><span class="n">totaal</span><span class="w"> </span><span class="nb">DECIMAL</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">2</span><span class="p">),</span>
+<span class="w">    </span><span class="k">FOREIGN</span><span class="w"> </span><span class="k">KEY</span><span class="w"> </span><span class="p">(</span><span class="n">klant_id</span><span class="p">)</span><span class="w"> </span><span class="k">REFERENCES</span><span class="w"> </span><span class="n">klanten</span><span class="p">(</span><span class="n">klant_id</span><span class="p">)</span>
+<span class="p">);</span>
+</code></pre></div>
+<p>Hier verwijst <code>klant_id</code> in <code>bestellingen</code> naar <code>klant_id</code> in <code>klanten</code>. Dat betekent dat elke bestelling gekoppeld is aan een bestaande klant.</p>
+<p>Vreemde sleutels helpen om:</p>
+<ul>
+<li>gegevensintegriteit te waarborgen;</li>
+<li>relaties tussen tabellen te modelleren;</li>
+<li>consistente en betrouwbare databases te bouwen.</li>
+</ul>
+<blockquote>
+<p>Een relationeel model werkt dus vooral door tabellen te koppelen aan elkaar via primaire en vreemde sleutels.</p>
+</blockquote>
+<h2 id="relationele_modellen-in-een-oogopslag">In één oogopslag</h2>
+<p>Een relationeel model bestaat uit:</p>
+<ul>
+<li>tabellen;</li>
+<li>kolommen;</li>
+<li>rijen;</li>
+<li>primaire sleutels;</li>
+<li>vreemde sleutels;</li>
+<li>relaties tussen tabellen.</li>
+</ul>
+<h3 id="relationele_modellen-voorbeeld">Voorbeeld</h3>
+<table>
+<thead>
+<tr>
+<th>klanten</th>
+<th></th>
+<th></th>
+<th></th>
+<th>bestellingen</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>klant_id</td>
+<td>naam</td>
+<td>email</td>
+<td></td>
+<td>bestel_id</td>
+</tr>
+<tr>
+<td>1</td>
+<td>Anna</td>
+<td>anna@x.nl</td>
+<td></td>
+<td>101</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Bob</td>
+<td>bob@x.nl</td>
+<td></td>
+<td>102</td>
+</tr>
+</tbody>
+</table>
+<p>De kolom <code>klant_id</code> in <code>bestellingen</code> verwijst naar <code>klant_id</code> in <code>klanten</code>.</p>
+<h2 id="relationele_modellen-belangrijk-om-te-onthouden">Belangrijk om te onthouden</h2>
+<ul>
+<li>Een primaire sleutel maakt een rij uniek.</li>
+<li>Een vreemde sleutel koppelt tabellen aan elkaar.</li>
+<li>Relaties houden de data consistent.</li>
+</ul>
+<h2 id="relationele_modellen-oefenopdrachten">Oefenopdrachten</h2>
+<ol>
+<li>Maak een eenvoudig relationeel model voor een bibliotheek met de tabellen <code>leden</code> en <code>uitleningen</code>. Bepaal welke kolommen en welke primaire sleutel je nodig hebt.</li>
+<li>Leg uit waarom een <code>FOREIGN KEY</code> nodig is in een tabel als <code>uitleningen</code> verwijst naar <code>leden</code>. Wat gebeurt er als een lid wordt verwijderd?</li>
+</ol></section><section class="print-page" id="er_diagrammen" heading-number="4"><h1 id="er_diagrammen-er-diagrammen">ER-diagrammen</h1>
 <h2 id="er_diagrammen-entiteiten-en-attributen">Entiteiten en attributen</h2>
-<p><em>(Nog aan te vullen)</em></p>
+<p>Een ER-diagram (Entity-Relationship diagram) is een visuele manier om een database te modelleren. Het laat zien welke soorten gegevens er zijn en hoe deze met elkaar samenhangen.</p>
+<p>Belangrijkste begrippen:</p>
+<ul>
+<li>entiteit: een object of concept uit de werkelijkheid, zoals <code>klant</code>, <code>product</code> of <code>bestelling</code>;</li>
+<li>attribuut: een eigenschap van een entiteit, zoals <code>naam</code>, <code>email</code> of <code>prijs</code>;</li>
+<li>relatie: de verbinding tussen entiteiten.</li>
+</ul>
+<p>Voorbeeld:</p>
+<ul>
+<li>Entiteit: <code>Klant</code></li>
+<li>klant_id</li>
+<li>naam</li>
+<li>email</li>
+<li>Entiteit: <code>Bestelling</code></li>
+<li>bestel_id</li>
+<li>datum</li>
+<li>totaal</li>
+</ul>
+<p>Deze entiteiten zijn niet zomaar los van elkaar; ze hebben een betekenisvolle relatie: een klant plaatst een bestelling.</p>
 <h2 id="er_diagrammen-relaties-tussen-entiteiten">Relaties tussen entiteiten</h2>
-<p><em>(Nog aan te vullen)</em></p>
+<p>Relaties beschrijven hoe twee entiteiten met elkaar verbonden zijn. Hierbij kun je denken aan:</p>
+<ul>
+<li>één-op-veel;</li>
+<li>veel-op-veel;</li>
+<li>één-op-één.</li>
+</ul>
+<p>Voorbeeld:</p>
+<ul>
+<li>één klant kan meerdere bestellingen plaatsen;</li>
+<li>elke bestelling hoort bij één klant.</li>
+</ul>
+<p>Dus de relatie tussen <code>Klant</code> en <code>Bestelling</code> is een één-op-veel-relatie.</p>
+<p>ER-diagrammen maken dit inzichtelijk zonder dat je meteen te maken hebt met SQL of technische details.</p>
 <h2 id="er_diagrammen-cardinaliteit">Cardinaliteit</h2>
-<p><em>(Nog aan te vullen)</em></p></section><section class="print-page" id="sql_basis" heading-number="5"><h1 id="sql_basis-sql-basis">SQL basis</h1>
+<p>Cardinaliteit beschrijft hoeveel records van de ene entiteit kunnen samenhangen met hoeveel records van een andere entiteit.</p>
+<p>Voorbeelden:</p>
+<ul>
+<li>één-op-één: één student heeft één studentnummer;</li>
+<li>één-op-veel: één docent geeft les aan meerdere studenten;</li>
+<li>veel-op-veel: meerdere studenten volgen meerdere cursussen.</li>
+</ul>
+<p>Bij ER-modelleren wordt cardinaliteit vaak weergegeven met symbolen die aangeven hoeveel exemplaren er maximaal aan elkaar gekoppeld kunnen zijn.</p>
+<p>Dit is belangrijk omdat de juiste relaties bepalen hoe je de tabellen in een database gaat structureren.</p>
+<blockquote>
+<p>Een ER-diagram is een blauwdruk voor de database: het laat zien wat de data betekent en hoe de verschillende delen van het model met elkaar verbonden zijn.</p>
+</blockquote>
+<h2 id="er_diagrammen-in-een-oogopslag">In één oogopslag</h2>
+<ul>
+<li>Entiteit = object of concept</li>
+<li>Attribuut = eigenschap van een entiteit</li>
+<li>Relatie = verband tussen entiteiten</li>
+<li>Cardinaliteit = hoeveel records ermee samenhangen</li>
+</ul>
+<h3 id="er_diagrammen-mini-voorbeeld">Mini-voorbeeld</h3>
+<ul>
+<li>Klant</li>
+<li>klant_id</li>
+<li>naam</li>
+<li>email</li>
+<li>Bestelling</li>
+<li>bestel_id</li>
+<li>datum</li>
+<li>totaal</li>
+</ul>
+<p>Relatie: één klant kan meerdere bestellingen plaatsen.</p>
+<h2 id="er_diagrammen-visuele-gedachtegang">Visuele gedachtegang</h2>
+<p>Voordat je SQL schrijft, moet je eerst begrijpen wat de echte gegevens zijn en hoe ze samenhangen. Een ER-diagram helpt je dat te zien zonder direct in SQL te denken.</p>
+<h2 id="er_diagrammen-oefenopdrachten">Oefenopdrachten</h2>
+<ol>
+<li>Teken of beschrijf een ER-diagram voor een winkel met de entiteiten <code>klant</code>, <code>bestelling</code> en <code>product</code>. Geef aan welke relaties er zijn.</li>
+<li>Wat is het verschil tussen een entiteit en een attribuut? Geef voor beide een voorbeeld uit een schooldatabase.</li>
+</ol></section><section class="print-page" id="sql_basis" heading-number="5"><h1 id="sql_basis-sql-basis">SQL basis</h1>
 <h2 id="sql_basis-select">SELECT</h2>
-<p><em>(Nog aan te vullen)</em></p>
+<p><code>SELECT</code> wordt gebruikt om gegevens uit een database op te halen. Het is waarschijnlijk het meest gebruikte SQL-commando.</p>
+<p>Basisvoorbeeld:</p>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">klanten</span><span class="p">;</span>
+</code></pre></div>
+<p>Deze query geeft alle kolommen en alle rijen uit de tabel <code>klanten</code> terug.</p>
+<p>Als je alleen bepaalde kolommen wilt zien:</p>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">naam</span><span class="p">,</span><span class="w"> </span><span class="n">email</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">klanten</span><span class="p">;</span>
+</code></pre></div>
+<p>Je kunt ook voorwaarden toevoegen met <code>WHERE</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">naam</span><span class="p">,</span><span class="w"> </span><span class="n">email</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">klanten</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">klant_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+</code></pre></div>
+<p>Met <code>ORDER BY</code> kun je resultaten sorteren:</p>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">naam</span><span class="p">,</span><span class="w"> </span><span class="n">email</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">klanten</span>
+<span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">naam</span><span class="w"> </span><span class="k">ASC</span><span class="p">;</span>
+</code></pre></div>
 <h2 id="sql_basis-insert">INSERT</h2>
-<p><em>(Nog aan te vullen)</em></p>
+<p><code>INSERT</code> wordt gebruikt om nieuwe records aan een tabel toe te voegen.</p>
+<p>Basisvoorbeeld:</p>
+<div class="highlight"><pre><span></span><code><span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">klanten</span><span class="w"> </span><span class="p">(</span><span class="n">naam</span><span class="p">,</span><span class="w"> </span><span class="n">email</span><span class="p">)</span>
+<span class="k">VALUES</span><span class="w"> </span><span class="p">(</span><span class="s1">'Anna'</span><span class="p">,</span><span class="w"> </span><span class="s1">'anna@example.com'</span><span class="p">);</span>
+</code></pre></div>
+<p>Je kunt meerdere records tegelijk invoegen:</p>
+<div class="highlight"><pre><span></span><code><span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">klanten</span><span class="w"> </span><span class="p">(</span><span class="n">naam</span><span class="p">,</span><span class="w"> </span><span class="n">email</span><span class="p">)</span>
+<span class="k">VALUES</span>
+<span class="w">    </span><span class="p">(</span><span class="s1">'Bob'</span><span class="p">,</span><span class="w"> </span><span class="s1">'bob@example.com'</span><span class="p">),</span>
+<span class="w">    </span><span class="p">(</span><span class="s1">'Celine'</span><span class="p">,</span><span class="w"> </span><span class="s1">'celine@example.com'</span><span class="p">);</span>
+</code></pre></div>
 <h2 id="sql_basis-update">UPDATE</h2>
-<p><em>(Nog aan te vullen)</em></p>
+<p><code>UPDATE</code> wordt gebruikt om bestaande gegevens te wijzigen.</p>
+<p>Voorbeeld:</p>
+<div class="highlight"><pre><span></span><code><span class="k">UPDATE</span><span class="w"> </span><span class="n">klanten</span>
+<span class="k">SET</span><span class="w"> </span><span class="n">email</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'nieuw@email.com'</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">klant_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+</code></pre></div>
+<p>Hierbij wordt alleen de klant met <code>klant_id = 1</code> aangepast. Zonder <code>WHERE</code> zouden alle records worden gewijzigd.</p>
 <h2 id="sql_basis-delete">DELETE</h2>
-<p><em>(Nog aan te vullen)</em></p></section><section class="print-page" id="joins" heading-number="6"><h1 id="joins-joins">Joins</h1>
+<p><code>DELETE</code> wordt gebruikt om records uit een tabel te verwijderen.</p>
+<p>Voorbeeld:</p>
+<div class="highlight"><pre><span></span><code><span class="k">DELETE</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">klanten</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">klant_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+</code></pre></div>
+<p>Let op: ook hier is <code>WHERE</code> belangrijk. Zonder <code>WHERE</code> zouden alle gegevens uit de tabel worden verwijderd.</p>
+<h2 id="sql_basis-samenvatting">Samenvatting</h2>
+<p>De basisbewerkingen in SQL zijn:</p>
+<ul>
+<li><code>SELECT</code>: gegevens lezen</li>
+<li><code>INSERT</code>: gegevens toevoegen</li>
+<li><code>UPDATE</code>: gegevens aanpassen</li>
+<li><code>DELETE</code>: gegevens verwijderen</li>
+</ul>
+<p>Deze vier opdrachten vormen de kern van het werken met relationele databases.</p>
+<h2 id="sql_basis-in-een-oogopslag">In één oogopslag</h2>
+<ul>
+<li><code>SELECT</code> = lees gegevens</li>
+<li><code>INSERT</code> = voeg gegevens toe</li>
+<li><code>UPDATE</code> = wijzig gegevens</li>
+<li><code>DELETE</code> = verwijder gegevens</li>
+</ul>
+<h2 id="sql_basis-snel-overzicht">Snel overzicht</h2>
+<table>
+<thead>
+<tr>
+<th>Commando</th>
+<th>Doel</th>
+<th>Voorbeeld</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>SELECT</code></td>
+<td>Gegevens ophalen</td>
+<td><code>SELECT * FROM klanten;</code></td>
+</tr>
+<tr>
+<td><code>INSERT</code></td>
+<td>Nieuwe gegevens toevoegen</td>
+<td><code>INSERT INTO klanten ...</code></td>
+</tr>
+<tr>
+<td><code>UPDATE</code></td>
+<td>Bestaande gegevens aanpassen</td>
+<td><code>UPDATE klanten SET ...</code></td>
+</tr>
+<tr>
+<td><code>DELETE</code></td>
+<td>Gegevens verwijderen</td>
+<td><code>DELETE FROM klanten WHERE ...</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="sql_basis-oefenopdrachten">Oefenopdrachten</h2>
+<ol>
+<li>Schrijf een query die van alle klanten alleen de naam en e-mailadres toont, gesorteerd op naam van A tot Z.</li>
+<li>Voeg twee nieuwe klanten toe aan de tabel <code>klanten</code> en wijzig daarna het e-mailadres van één van die klanten. Verwijder daarna de klant die je als tweede hebt toegevoegd.</li>
+</ol></section><section class="print-page" id="joins" heading-number="6"><h1 id="joins-joins">Joins</h1>
 <h2 id="joins-inner-join">INNER JOIN</h2>
-<p><em>(Nog aan te vullen)</em></p>
+<p>Een <code>INNER JOIN</code> retourneert alleen de records die aan beide tabellen voldoen. Met andere woorden: je krijgt alleen de combinaties die bestaan in beide tabellen.</p>
+<p>Voorbeeld:</p>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">klanten</span><span class="p">.</span><span class="n">naam</span><span class="p">,</span><span class="w"> </span><span class="n">bestellingen</span><span class="p">.</span><span class="n">bestel_id</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">klanten</span>
+<span class="k">INNER</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">bestellingen</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">klanten</span><span class="p">.</span><span class="n">klant_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">bestellingen</span><span class="p">.</span><span class="n">klant_id</span><span class="p">;</span>
+</code></pre></div>
+<p>Deze query laat alleen klanten zien die daadwerkelijk een bestelling hebben geplaatst.</p>
 <h2 id="joins-left-join">LEFT JOIN</h2>
-<p><em>(Nog aan te vullen)</em></p>
+<p>Een <code>LEFT JOIN</code> geeft alle records uit de linker tabel terug, zelfs als er geen overeenkomst in de rechter tabel bestaat. De rechter waarden zijn dan <code>NULL</code>.</p>
+<p>Voorbeeld:</p>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">klanten</span><span class="p">.</span><span class="n">naam</span><span class="p">,</span><span class="w"> </span><span class="n">bestellingen</span><span class="p">.</span><span class="n">bestel_id</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">klanten</span>
+<span class="k">LEFT</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">bestellingen</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">klanten</span><span class="p">.</span><span class="n">klant_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">bestellingen</span><span class="p">.</span><span class="n">klant_id</span><span class="p">;</span>
+</code></pre></div>
+<p>Hier zie je alle klanten, ook die nog geen bestelling hebben gedaan.</p>
 <h2 id="joins-right-join">RIGHT JOIN</h2>
-<p><em>(Nog aan te vullen)</em></p></section><section class="print-page" id="normalisatie" heading-number="7"><h1 id="normalisatie-normalisatie">Normalisatie</h1>
+<p>Een <code>RIGHT JOIN</code> werkt precies andersom: alle records uit de rechter tabel worden getoond, zelfs als er geen overeenkomst in de linker tabel is.</p>
+<p>Voorbeeld:</p>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">klanten</span><span class="p">.</span><span class="n">naam</span><span class="p">,</span><span class="w"> </span><span class="n">bestellingen</span><span class="p">.</span><span class="n">bestel_id</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">klanten</span>
+<span class="k">RIGHT</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">bestellingen</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">klanten</span><span class="p">.</span><span class="n">klant_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">bestellingen</span><span class="p">.</span><span class="n">klant_id</span><span class="p">;</span>
+</code></pre></div>
+<p>Deze query toont alle bestellingen, zelfs als er geen klantrecord gekoppeld is.</p>
+<h2 id="joins-wanneer-gebruik-je-welke-join">Wanneer gebruik je welke join?</h2>
+<ul>
+<li><code>INNER JOIN</code>: alleen overeenkomende gegevens</li>
+<li><code>LEFT JOIN</code>: alles uit de linker tabel + overeenkomende gegevens uit de rechter tabel</li>
+<li><code>RIGHT JOIN</code>: alles uit de rechter tabel + overeenkomende gegevens uit de linker tabel</li>
+</ul>
+<blockquote>
+<p>Joins zijn essentieel in relationele databases, omdat ze gegevens uit verschillende tabellen combineren op basis van hun relatie.</p>
+</blockquote>
+<h2 id="joins-snel-vergelijken">Snel vergelijken</h2>
+<table>
+<thead>
+<tr>
+<th>Join-type</th>
+<th>Wat krijg je terug?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>INNER JOIN</code></td>
+<td>Alleen records die in beide tabellen voorkomen</td>
+</tr>
+<tr>
+<td><code>LEFT JOIN</code></td>
+<td>Alle records uit de linker tabel, ook zonder match</td>
+</tr>
+<tr>
+<td><code>RIGHT JOIN</code></td>
+<td>Alle records uit de rechter tabel, ook zonder match</td>
+</tr>
+</tbody>
+</table>
+<h2 id="joins-denk-aan-het-voorbeeld">Denk aan het voorbeeld</h2>
+<ul>
+<li><code>klanten</code> is de linker tabel</li>
+<li><code>bestellingen</code> is de rechter tabel</li>
+<li>de join gebeurt op <code>klant_id</code></li>
+</ul>
+<p>Als je wilt weten welke klanten bestellingen hebben, gebruik je meestal een <code>LEFT JOIN</code> of <code>INNER JOIN</code>.</p>
+<h2 id="joins-oefenopdrachten">Oefenopdrachten</h2>
+<ol>
+<li>Schrijf een query met een <code>INNER JOIN</code> die alle klanten toont samen met hun bestellingen.</li>
+<li>Geef aan welk type join je gebruikt als je alle klanten wilt tonen, ook als ze nog geen bestelling hebben gemaakt. Waarom is dat handig?</li>
+</ol></section><section class="print-page" id="normalisatie" heading-number="7"><h1 id="normalisatie-normalisatie">Normalisatie</h1>
 <h2 id="normalisatie-waarom-normaliseren">Waarom normaliseren?</h2>
-<p><em>(Nog aan te vullen)</em></p>
+<p>Normalisatie is het organiseren van gegevens in een database zodat redundantie wordt verminderd en de consistentie wordt verbeterd. Met andere woorden: je wilt voorkomen dat dezelfde informatie meerdere keren in verschillende tabellen verschijnt.</p>
+<p>Een ongeorganiseerde database kan leiden tot:</p>
+<ul>
+<li>dubbele informatie;</li>
+<li>inconsistenties;</li>
+<li>meer onderhoud nodig bij wijzigingen;</li>
+<li>moeilijkere queries en analyses.</li>
+</ul>
+<p>Door normalisatie te gebruiken, verdeel je gegevens logisch over passende tabellen. Daardoor wordt de database overzichtelijker en beter te onderhouden.</p>
 <h2 id="normalisatie-eerste-normaalvorm-1nf">Eerste normaalvorm (1NF)</h2>
-<p><em>(Nog aan te vullen)</em></p>
+<p>Een tabel is in de eerste normaalvorm als:</p>
+<ul>
+<li>elke kolom een enkelvoudige waarde bevat;</li>
+<li>er geen herhaalde groepen aanwezig zijn;</li>
+<li>elke rij uniek identificeerbaar is.</li>
+</ul>
+<p>Voorbeeld van een tabel die niet voldoet aan 1NF:</p>
+<table>
+<thead>
+<tr>
+<th>klant_id</th>
+<th>naam</th>
+<th>hobby's</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Anna</td>
+<td>tennis, zwemmen</td>
+</tr>
+</tbody>
+</table>
+<p>Hier staat meerdere informatie in één veld (<code>hobby's</code>). In 1NF zou je dit opsplitsen in meerdere records of een aparte tabel.</p>
 <h2 id="normalisatie-tweede-normaalvorm-2nf">Tweede normaalvorm (2NF)</h2>
-<p><em>(Nog aan te vullen)</em></p>
+<p>Een tabel is in de tweede normaalvorm als:</p>
+<ul>
+<li>deze voldoet aan 1NF;</li>
+<li>alle niet-sleutelvelden volledig afhankelijk zijn van de primaire sleutel.</li>
+</ul>
+<p>Dit is vooral relevant als een tabel een samengestelde sleutel heeft. Als een veld alleen afhankelijk is van een deel van die sleutel, is er sprake van overbodige gegevens.</p>
+<p>Voorbeeld:</p>
+<p>Een orderregel tabel bevat <code>order_id</code>, <code>product_id</code>, <code>product_naam</code> en <code>prijs</code>. Hier hangt <code>product_naam</code> alleen af van <code>product_id</code>, niet van <code>order_id</code>. Dat is een teken dat de structuur nog niet optimaal is.</p>
 <h2 id="normalisatie-derde-normaalvorm-3nf">Derde normaalvorm (3NF)</h2>
-<p><em>(Nog aan te vullen)</em></p></section><section class="print-page" id="indexen_performantie" heading-number="8"><h1 id="indexen_performantie-indexen-en-performantie">Indexen en performantie</h1>
+<p>Een tabel is in de derde normaalvorm als:</p>
+<ul>
+<li>deze voldoet aan 2NF;</li>
+<li>geen niet-sleutelveld afhankelijk is van een ander niet-sleutelveld.</li>
+</ul>
+<p>Met andere woorden: je mag geen informatie opslaan die eigenlijk al ergens anders in de database staat en afgeleid kan worden uit andere velden.</p>
+<p>Voorbeeld:</p>
+<p>Als je in een klantenbestand zowel <code>stad</code> als <code>postcode</code> opslaat, en <code>stad</code> af te leiden is uit <code>postcode</code>, dan is dat geen goede normalisatie. Je bewaart dan informatie die niet onafhankelijk is.</p>
+<h2 id="normalisatie-samenvatting">Samenvatting</h2>
+<p>Normalisatie helpt bij:</p>
+<ul>
+<li>minder redundantie;</li>
+<li>betere data-integriteit;</li>
+<li>eenvoudigere onderhoudbaarheid;</li>
+<li>duidelijkere structuur.</li>
+</ul>
+<blockquote>
+<p>De kernidee is dat elke informatie op één logische plaats wordt opgeslagen, in plaats van meerdere keren in de database te herhalen.</p>
+</blockquote>
+<h2 id="normalisatie-snel-overzicht">Snel overzicht</h2>
+<table>
+<thead>
+<tr>
+<th>Normaalvorm</th>
+<th>Doel</th>
+<th>Denk aan</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1NF</td>
+<td>Geen herhaalde groepen</td>
+<td>Eén waarde per veld</td>
+</tr>
+<tr>
+<td>2NF</td>
+<td>Geen afhankelijkheid van een deel van een samengestelde sleutel</td>
+<td>Logische onderverdeling</td>
+</tr>
+<tr>
+<td>3NF</td>
+<td>Geen afhankelijke niet-sleutelvelden</td>
+<td>Geen overbodige informatie</td>
+</tr>
+</tbody>
+</table>
+<h2 id="normalisatie-tip">Tip</h2>
+<p>Normalisatie is niet bedoeld om de database ingewikkelder te maken, maar om de data juist en logisch te houden.</p>
+<h2 id="normalisatie-oefenopdrachten">Oefenopdrachten</h2>
+<ol>
+<li>Noem twee redenen waarom normalisatie belangrijk is bij het ontwerpen van een database. Geef een voorbeeld van een probleem dat ontstaat zonder normalisatie.</li>
+<li>Bekijk een tabel met <code>klant_id</code>, <code>klant_naam</code>, <code>postcode</code> en <code>stad</code>. Leg uit waarom deze tabel mogelijk niet voldoet aan de derde normaalvorm.</li>
+</ol></section><section class="print-page" id="indexen_performantie" heading-number="8"><h1 id="indexen_performantie-indexen-en-performantie">Indexen en performantie</h1>
 <h2 id="indexen_performantie-wat-is-een-index">Wat is een index?</h2>
 <p><em>(Nog aan te vullen)</em></p>
 <h2 id="indexen_performantie-wanneer-gebruik-je-een-index">Wanneer gebruik je een index?</h2>
-<p><em>(Nog aan te vullen)</em></p></section><section class="print-page" id="transacties" heading-number="9"><h1 id="transacties-transacties">Transacties</h1>
-<h2 id="transacties-wat-is-een-transactie">Wat is een transactie?</h2>
 <p><em>(Nog aan te vullen)</em></p>
+<h2 id="indexen_performantie-snel-overzicht">Snel overzicht</h2>
+<ul>
+<li>Index = snelle zoekroute naar data</li>
+<li>Gebruik je vooral op kolommen die vaak gefilterd of gesorteerd worden</li>
+<li>Te veel indexen kunnen ook vertragen bij inserts en updates</li>
+</ul>
+<h2 id="indexen_performantie-belangrijk-om-te-onthouden">Belangrijk om te onthouden</h2>
+<p>Een index verbetert vaak leesopdrachten, maar kost extra ruimte en onderhoud. Daarom gebruik je hem slim, niet overal.</p>
+<h2 id="indexen_performantie-oefenopdrachten">Oefenopdrachten</h2>
+<ol>
+<li>Leg uit in je eigen woorden wat een index in een database doet en waarom deze de queryprestaties kan verbeteren.</li>
+<li>Geef een voorbeeld van een tabel waarin het nuttig is om een index te gebruiken en beschrijf welke kolom je hiervoor zou indexeren.</li>
+</ol></section><section class="print-page" id="transacties" heading-number="9"><h1 id="transacties-transacties">Transacties</h1>
+<h2 id="transacties-wat-is-een-transactie">Wat is een transactie?</h2>
+<p>Een transactie is een reeks databasebewerkingen die als één geheel uitgevoerd worden. Als één onderdeel van de transactie mislukt, dan worden de andere wijzigingen vaak ook teruggedraaid.</p>
+<p>Voorbeeld:</p>
+<div class="highlight"><pre><span></span><code><span class="k">BEGIN</span><span class="p">;</span>
+
+<span class="k">UPDATE</span><span class="w"> </span><span class="n">rekeningen</span><span class="w"> </span><span class="k">SET</span><span class="w"> </span><span class="n">saldo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">saldo</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">100</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">klant_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<span class="k">UPDATE</span><span class="w"> </span><span class="n">rekeningen</span><span class="w"> </span><span class="k">SET</span><span class="w"> </span><span class="n">saldo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">saldo</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">100</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">klant_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span>
+
+<span class="k">COMMIT</span><span class="p">;</span>
+</code></pre></div>
+<p>Als deze twee updates succesvol uitgevoerd worden, is de transactie afgerond. Als er iets fout gaat, kun je in plaats daarvan <code>ROLLBACK</code> gebruiken om alles terug te draaien.</p>
+<p>Transacties zijn belangrijk in situaties waar gegevens altijd consistent moeten blijven, bijvoorbeeld bij banktransacties of orderverwerking.</p>
 <h2 id="transacties-acid-eigenschappen">ACID-eigenschappen</h2>
-<p><em>(Nog aan te vullen)</em></p></section><section class="print-page" id="praktijkcases" heading-number="10"><h1 id="praktijkcases-praktijkcases">Praktijkcases</h1>
-<p><em>(Nog aan te vullen)</em></p></section></div><style>.print-site-enumerate-headings #index > h1:before { content: '1 ' }
+<p>ACID staat voor:</p>
+<ul>
+<li>Atomicity: een transactie is volledig of helemaal niet.</li>
+<li>Consistency: de database blijft in een geldige toestand.</li>
+<li>Isolation: transacties kunnen gelijktijdig plaatsvinden zonder elkaar te verstoren.</li>
+<li>Durability: als een transactie is bevestigd, blijft deze ook bij een storing behouden.</li>
+</ul>
+<h3 id="transacties-uitleg">Uitleg</h3>
+<ul>
+<li>Atomicity: als een opdracht in de transactie faalt, wordt alles teruggedraaid.</li>
+<li>Consistency: de gegevensregels blijven geldig, zoals primaire sleutels en vreemde sleutels.</li>
+<li>Isolation: een andere transactie ziet de wijzigingen niet half afgerond.</li>
+<li>Durability: na <code>COMMIT</code> blijven de wijzigingen bewaard, zelfs bij crash of stroomuitval.</li>
+</ul>
+<blockquote>
+<p>ACID is een belangrijk concept in relationele databases omdat het zorgt voor betrouwbaarheid en veiligheid bij het verwerken van data.</p>
+</blockquote>
+<h2 id="transacties-acid-in-een-oogopslag">ACID in één oogopslag</h2>
+<ul>
+<li>Atomicity: alles of niets</li>
+<li>Consistency: database blijft geldig</li>
+<li>Isolation: transacties zijn gescheiden</li>
+<li>Durability: bevestigde wijzigingen blijven staan</li>
+</ul>
+<h2 id="transacties-praktisch-voorbeeld">Praktisch voorbeeld</h2>
+<div class="highlight"><pre><span></span><code><span class="k">BEGIN</span><span class="p">;</span>
+<span class="k">UPDATE</span><span class="w"> </span><span class="n">rekeningen</span><span class="w"> </span><span class="k">SET</span><span class="w"> </span><span class="n">saldo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">saldo</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">100</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">klant_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<span class="k">UPDATE</span><span class="w"> </span><span class="n">rekeningen</span><span class="w"> </span><span class="k">SET</span><span class="w"> </span><span class="n">saldo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">saldo</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">100</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">klant_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span>
+<span class="k">COMMIT</span><span class="p">;</span>
+</code></pre></div>
+<p>Als één update mislukt, gebruik je <code>ROLLBACK</code> om beide wijzigingen terug te draaien.</p>
+<h2 id="transacties-oefenopdrachten">Oefenopdrachten</h2>
+<ol>
+<li>Leg uit waarom een banktransactie als een transactie in SQL moet worden uitgevoerd. Wat gebeurt er als één van de twee updates faalt?</li>
+<li>Noem de vier ACID-eigenschappen en geef voor elk een kort voorbeeld uit de praktijk.</li>
+</ol></section><section class="print-page" id="praktijkcases" heading-number="10"><h1 id="praktijkcases-praktijkcases">Praktijkcases</h1>
+<p><em>(Nog aan te vullen)</em></p>
+<h2 id="praktijkcases-denk-in-modellen">Denk in modellen</h2>
+<p>Bij een praktijkcase is het handig om eerst te vragen:</p>
+<ul>
+<li>Welke entiteiten heb ik nodig?</li>
+<li>Welke eigenschappen horen daarbij?</li>
+<li>Hoe zijn die entiteiten met elkaar verbonden?</li>
+<li>Welke informatie moet ik op een logische plaats bewaren?</li>
+</ul>
+<h2 id="praktijkcases-voorbeeldcase">Voorbeeldcase</h2>
+<p>Een schooldatabase kan bestaan uit:</p>
+<ul>
+<li><code>studenten</code></li>
+<li><code>cursussen</code></li>
+<li><code>inschrijvingen</code></li>
+</ul>
+<p>Hiermee kun je zien welke student welke cursus volgt.</p>
+<h2 id="praktijkcases-oefenopdrachten">Oefenopdrachten</h2>
+<ol>
+<li>Ontwerp een kleine database voor een webshop met klanten, producten en bestellingen. Noem de belangrijkste tabellen en relaties.</li>
+<li>Beschrijf een praktijkcase uit een school, ziekenhuis of bedrijf waarin je een relationele database zou gebruiken. Leg uit waarom deze structuur geschikt is.</li>
+</ol></section></div><style>.print-site-enumerate-headings #index > h1:before { content: '1 ' }
 
                 .print-site-enumerate-headings #index h2:before { content: '1.' counter(counter-index-2) ' ' }
                 .print-site-enumerate-headings #index h2 {  counter-reset: counter-index-3 ;  counter-increment: counter-index-2 }

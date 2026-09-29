@@ -380,6 +380,56 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#in-een-oogopslag" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        In één oogopslag
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="In één oogopslag">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#voorbeeld" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Voorbeeld
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#belangrijk-om-te-onthouden" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Belangrijk om te onthouden
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#oefenopdrachten" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Oefenopdrachten
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -636,6 +686,56 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#in-een-oogopslag" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        In één oogopslag
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="In één oogopslag">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#voorbeeld" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Voorbeeld
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#belangrijk-om-te-onthouden" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Belangrijk om te onthouden
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#oefenopdrachten" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Oefenopdrachten
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -655,11 +755,120 @@
 
 <h1 id="relationele-modellen">Relationele modellen</h1>
 <h2 id="tabellen-rijen-en-kolommen">Tabellen, rijen en kolommen</h2>
-<p><em>(Nog aan te vullen)</em></p>
+<p>Een relationeel model is een manier om data te organiseren in tabellen. Elke tabel vertegenwoordigt een bepaald soort informatie, zoals klanten, producten of bestellingen.</p>
+<p>Een tabel bestaat uit:</p>
+<ul>
+<li>kolommen: de eigenschappen van de gegevens;</li>
+<li>rijen: de individuele records;</li>
+<li>een duidelijke naam en structuur.</li>
+</ul>
+<p>Voorbeeld:</p>
+<div class="highlight"><pre><span></span><code><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">klanten</span><span class="w"> </span><span class="p">(</span>
+<span class="w">    </span><span class="n">klant_id</span><span class="w"> </span><span class="nb">INT</span><span class="p">,</span>
+<span class="w">    </span><span class="n">naam</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">100</span><span class="p">),</span>
+<span class="w">    </span><span class="n">email</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
+<span class="p">);</span>
+</code></pre></div>
+<p>Hierbij is:</p>
+<ul>
+<li><code>klant_id</code> een kolom;</li>
+<li>een specifieke klant een rij;</li>
+<li><code>naam</code> en <code>email</code> eigenschappen van die klant.</li>
+</ul>
+<p>Het grote voordeel van relationele modellen is dat gegevens logisch georganiseerd worden, waardoor ze beter te beheren, op te vragen en te koppelen zijn.</p>
 <h2 id="primaire-sleutels">Primaire sleutels</h2>
-<p><em>(Nog aan te vullen)</em></p>
+<p>Een primaire sleutel is een kolom of combinatie van kolommen die elke rij in een tabel uniek maakt. Hiermee kun je elke record precies identificeren.</p>
+<p>Voorbeeld:</p>
+<div class="highlight"><pre><span></span><code><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">klanten</span><span class="w"> </span><span class="p">(</span>
+<span class="w">    </span><span class="n">klant_id</span><span class="w"> </span><span class="nb">INT</span><span class="w"> </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="p">,</span>
+<span class="w">    </span><span class="n">naam</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">100</span><span class="p">),</span>
+<span class="w">    </span><span class="n">email</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
+<span class="p">);</span>
+</code></pre></div>
+<p>Hier is <code>klant_id</code> de primaire sleutel. Geen twee klanten kunnen dezelfde <code>klant_id</code> hebben.</p>
+<p>Waarom is dit belangrijk?</p>
+<ul>
+<li>Je kunt één record uniek terugvinden.</li>
+<li>Je voorkomt dubbele gegevens.</li>
+<li>Je kunt andere tabellen verwijzen naar dezelfde rij.</li>
+</ul>
 <h2 id="vreemde-sleutels">Vreemde sleutels</h2>
-<p><em>(Nog aan te vullen)</em></p>
+<p>Een vreemde sleutel is een kolom in een tabel die verwijst naar de primaire sleutel van een andere tabel. Hiermee leg je relaties tussen tabellen vast.</p>
+<p>Voorbeeld:</p>
+<div class="highlight"><pre><span></span><code><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">bestellingen</span><span class="w"> </span><span class="p">(</span>
+<span class="w">    </span><span class="n">bestel_id</span><span class="w"> </span><span class="nb">INT</span><span class="w"> </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="p">,</span>
+<span class="w">    </span><span class="n">klant_id</span><span class="w"> </span><span class="nb">INT</span><span class="p">,</span>
+<span class="w">    </span><span class="n">totaal</span><span class="w"> </span><span class="nb">DECIMAL</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">2</span><span class="p">),</span>
+<span class="w">    </span><span class="k">FOREIGN</span><span class="w"> </span><span class="k">KEY</span><span class="w"> </span><span class="p">(</span><span class="n">klant_id</span><span class="p">)</span><span class="w"> </span><span class="k">REFERENCES</span><span class="w"> </span><span class="n">klanten</span><span class="p">(</span><span class="n">klant_id</span><span class="p">)</span>
+<span class="p">);</span>
+</code></pre></div>
+<p>Hier verwijst <code>klant_id</code> in <code>bestellingen</code> naar <code>klant_id</code> in <code>klanten</code>. Dat betekent dat elke bestelling gekoppeld is aan een bestaande klant.</p>
+<p>Vreemde sleutels helpen om:</p>
+<ul>
+<li>gegevensintegriteit te waarborgen;</li>
+<li>relaties tussen tabellen te modelleren;</li>
+<li>consistente en betrouwbare databases te bouwen.</li>
+</ul>
+<blockquote>
+<p>Een relationeel model werkt dus vooral door tabellen te koppelen aan elkaar via primaire en vreemde sleutels.</p>
+</blockquote>
+<h2 id="in-een-oogopslag">In één oogopslag</h2>
+<p>Een relationeel model bestaat uit:</p>
+<ul>
+<li>tabellen;</li>
+<li>kolommen;</li>
+<li>rijen;</li>
+<li>primaire sleutels;</li>
+<li>vreemde sleutels;</li>
+<li>relaties tussen tabellen.</li>
+</ul>
+<h3 id="voorbeeld">Voorbeeld</h3>
+<table>
+<thead>
+<tr>
+<th>klanten</th>
+<th></th>
+<th></th>
+<th></th>
+<th>bestellingen</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>klant_id</td>
+<td>naam</td>
+<td>email</td>
+<td></td>
+<td>bestel_id</td>
+</tr>
+<tr>
+<td>1</td>
+<td>Anna</td>
+<td>anna@x.nl</td>
+<td></td>
+<td>101</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Bob</td>
+<td>bob@x.nl</td>
+<td></td>
+<td>102</td>
+</tr>
+</tbody>
+</table>
+<p>De kolom <code>klant_id</code> in <code>bestellingen</code> verwijst naar <code>klant_id</code> in <code>klanten</code>.</p>
+<h2 id="belangrijk-om-te-onthouden">Belangrijk om te onthouden</h2>
+<ul>
+<li>Een primaire sleutel maakt een rij uniek.</li>
+<li>Een vreemde sleutel koppelt tabellen aan elkaar.</li>
+<li>Relaties houden de data consistent.</li>
+</ul>
+<h2 id="oefenopdrachten">Oefenopdrachten</h2>
+<ol>
+<li>Maak een eenvoudig relationeel model voor een bibliotheek met de tabellen <code>leden</code> en <code>uitleningen</code>. Bepaal welke kolommen en welke primaire sleutel je nodig hebt.</li>
+<li>Leg uit waarom een <code>FOREIGN KEY</code> nodig is in een tabel als <code>uitleningen</code> verwijst naar <code>leden</code>. Wat gebeurt er als een lid wordt verwijderd?</li>
+</ol>
 
 
 
