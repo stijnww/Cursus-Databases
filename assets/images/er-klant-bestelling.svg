@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 270" role="img" aria-labelledby="title desc">
+  <title id="title">Klant plaatst bestellingen</title>
+  <desc id="desc">Een klant met klant_id, naam en email plaatst nul of meer bestellingen. Elke bestelling hoort bij precies één klant.</desc>
+  <style>
+    text { font-family: Arial, sans-serif; fill: #18323b; }
+    .entity { fill: #fff; stroke: #187a75; stroke-width: 2; }
+    .heading { fill: #e7f3f1; }
+    .line { stroke: #52666c; stroke-width: 2; }
+    .label { fill: #52666c; font-size: 15px; }
+  </style>
+  <rect x="35" y="54" width="230" height="170" rx="5" class="entity" />
+  <path d="M35 96h230" stroke="#187a75" stroke-width="2" />
+  <path d="M36 55h228v40H36z" class="heading" />
+  <text x="150" y="82" text-anchor="middle" font-size="20" font-weight="700">Klant</text>
+  <text x="58" y="126" font-size="16"><tspan font-weight="700">PK</tspan><tspan dx="10">klant_id</tspan></text>
+  <text x="58" y="158" font-size="16">naam</text>
+  <text x="58" y="190" font-size="16">email</text>
+
+  <rect x="495" y="54" width="230" height="170" rx="5" class="entity" />
+  <path d="M495 96h230" stroke="#187a75" stroke-width="2" />
+  <path d="M496 55h228v40H496z" class="heading" />
+  <text x="610" y="82" text-anchor="middle" font-size="20" font-weight="700">Bestelling</text>
+  <text x="518" y="126" font-size="16"><tspan font-weight="700">PK</tspan><tspan dx="10">bestel_id</tspan></text>
+  <text x="518" y="158" font-size="16">datum</text>
+  <text x="518" y="190" font-size="16">totaal</text>
+
+  <path d="M265 139h230" class="line" />
+  <text x="278" y="126" class="label" font-weight="700">1</text>
+  <text x="473" y="126" class="label" font-weight="700">0..*</text>
+  <text x="380" y="126" text-anchor="middle" class="label">plaatst</text>
+</svg>
