@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="220" viewBox="0 0 640 220" role="img" aria-labelledby="title desc">
+  <title id="title">Voorbeeld van de tabel bestellingen</title>
+  <desc id="desc">De tabel bestellingen heeft de kolommen bestel_id, klant_id, datum en totaal. De klant_id verwijst naar een klant.</desc>
+  <style>
+    text { font-family: Arial, sans-serif; fill: #18323b; }
+    .frame { fill: #fff; stroke: #187a75; stroke-width: 2; }
+    .title { fill: #187a75; }
+    .head { fill: #e7f3f1; }
+    .line { stroke: #c6d4d2; stroke-width: 1; }
+  </style>
+  <rect x="1" y="1" width="638" height="218" rx="5" class="frame" />
+  <path d="M3 3h634v48H3z" class="title" />
+  <text x="24" y="34" font-size="21" font-weight="700" fill="#fff">bestellingen</text>
+  <path d="M3 52h634v48H3z" class="head" />
+  <path d="M165 52v166M300 52v166M465 52v166M3 100h634M3 158h634" class="line" />
+  <text x="16" y="82" font-size="15" font-weight="700">bestel_id (PK)</text>
+  <text x="178" y="82" font-size="15" font-weight="700">klant_id (FK)</text>
+  <text x="313" y="82" font-size="15" font-weight="700">datum</text>
+  <text x="478" y="82" font-size="15" font-weight="700">totaal</text>
+  <text x="16" y="136" font-size="16">101</text>
+  <text x="178" y="136" font-size="16">1</text>
+  <text x="313" y="136" font-size="16">2025-03-01</text>
+  <text x="478" y="136" font-size="16">55,00</text>
+  <text x="16" y="194" font-size="16">102</text>
+  <text x="178" y="194" font-size="16">2</text>
+  <text x="313" y="194" font-size="16">2025-03-02</text>
+  <text x="478" y="194" font-size="16">20,00</text>
+</svg>

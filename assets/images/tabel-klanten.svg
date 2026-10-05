@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="220" viewBox="0 0 640 220" role="img" aria-labelledby="title desc">
+  <title id="title">Voorbeeld van de tabel klanten</title>
+  <desc id="desc">De tabel klanten heeft de kolommen klant_id, naam en email, met twee fictieve voorbeeldrecords.</desc>
+  <style>
+    text { font-family: Arial, sans-serif; fill: #18323b; }
+    .frame { fill: #fff; stroke: #187a75; stroke-width: 2; }
+    .title { fill: #187a75; }
+    .head { fill: #e7f3f1; }
+    .line { stroke: #c6d4d2; stroke-width: 1; }
+  </style>
+  <rect x="1" y="1" width="638" height="218" rx="5" class="frame" />
+  <path d="M3 3h634v48H3z" class="title" />
+  <text x="24" y="34" font-size="21" font-weight="700" fill="#fff">klanten</text>
+  <path d="M3 52h634v48H3z" class="head" />
+  <path d="M190 52v166M410 52v166M3 100h634M3 158h634" class="line" />
+  <text x="20" y="82" font-size="16" font-weight="700">klant_id (PK)</text>
+  <text x="208" y="82" font-size="16" font-weight="700">naam</text>
+  <text x="428" y="82" font-size="16" font-weight="700">email</text>
+  <text x="20" y="136" font-size="16">1</text>
+  <text x="208" y="136" font-size="16">Anna Jansen</text>
+  <text x="428" y="136" font-size="16">anna@example.nl</text>
+  <text x="20" y="194" font-size="16">2</text>
+  <text x="208" y="194" font-size="16">Bilal Bakker</text>
+  <text x="428" y="194" font-size="16">bilal@example.nl</text>
+</svg>

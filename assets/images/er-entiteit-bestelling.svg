@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="440" height="190" viewBox="0 0 440 190" role="img" aria-labelledby="title desc">
+  <title id="title">ER-entiteit Bestelling</title>
+  <desc id="desc">De entiteit Bestelling met de attributen bestel_id, datum en totaal.</desc>
+  <style>
+    text { font-family: Arial, sans-serif; fill: #18323b; }
+    .entity { fill: #fff; stroke: #187a75; stroke-width: 2; }
+    .heading { fill: #e7f3f1; }
+    .line { stroke: #c6d4d2; stroke-width: 1; }
+  </style>
+  <rect x="1" y="1" width="438" height="188" rx="5" class="entity" />
+  <path d="M3 3h434v48H3z" class="heading" />
+  <text x="24" y="34" font-size="21" font-weight="700">Bestelling</text>
+  <path d="M3 51h434M3 97h434M3 143h434" class="line" />
+  <text x="24" y="82" font-size="17">bestel_id</text>
+  <text x="24" y="128" font-size="17">datum</text>
+  <text x="24" y="174" font-size="17">totaal</text>
+</svg>
