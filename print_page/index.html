@@ -1031,8 +1031,10 @@
 </table>
 <h2 id="sql_basis-oefenopdrachten">Oefenopdrachten</h2>
 <ol>
-<li>Schrijf een query die van alle klanten alleen de naam en e-mailadres toont, gesorteerd op naam van A tot Z.</li>
-<li>Voeg twee nieuwe klanten toe aan de tabel <code>klanten</code> en wijzig daarna het e-mailadres van één van die klanten. Verwijder daarna de klant die je als tweede hebt toegevoegd.</li>
+<li>Maak in het door je leerkracht opgegeven databasesysteem de tabellen <code>klanten</code> en <code>bestellingen</code> uit het voorbeeld bij de inleiding. Gebruik geschikte gegevenstypen, maak <code>klant_id</code> en <code>bestel_id</code> primaire sleutels en laat <code>bestellingen.klant_id</code> als vreemde sleutel verwijzen naar <code>klanten.klant_id</code>. Maak eerst de tabel <code>klanten</code>.</li>
+<li>Vul beide tabellen met gegevens. Stel zelf een prompt op voor de Copilot van de school en vraag om <code>INSERT</code>-statements voor het databasesysteem dat je gebruikt. Vermeld in je prompt de tabelnamen, kolommen en onderlinge relatie. Vraag om minstens drie klanten en vijf bestellingen, waarbij alle <code>klant_id</code>-waarden in <code>bestellingen</code> naar een bestaande klant verwijzen. Controleer de gegenereerde statements op juiste tabel- en kolomnamen, geldige verwijzingen en passende SQL-syntaxis voordat je ze uitvoert. Controleer daarna met <code>SELECT</code> of beide tabellen gevuld zijn.</li>
+<li>Schrijf een query die van alle klanten alleen de naam en het e-mailadres toont, gesorteerd op naam van A tot Z.</li>
+<li>Voeg twee nieuwe klanten toe aan de tabel <code>klanten</code> en wijzig daarna het e-mailadres van één van die klanten. Verwijder vervolgens de klant die je als tweede hebt toegevoegd.</li>
 </ol></section><section class="print-page" id="joins" heading-number="6"><h1 id="joins-joins">Joins</h1>
 <h2 id="joins-inner-join">INNER JOIN</h2>
 <p>Een <code>INNER JOIN</code> retourneert alleen de records die aan beide tabellen voldoen. Met andere woorden: je krijgt alleen de combinaties die bestaan in beide tabellen.</p>
