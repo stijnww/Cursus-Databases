@@ -6,6 +6,24 @@
   background: #f3e5f5 !important;
 }
 
+/* Oefenopdrachten als herkenbare, gegroepeerde sectie */
+.md-content h2#oefenopdrachten {
+  margin-bottom: 0;
+  padding: 0.65rem 1rem;
+  border-left: 4px solid var(--md-accent-fg-color);
+  background: var(--md-code-bg-color);
+}
+
+.md-content h2#oefenopdrachten + ol {
+  margin-top: 0;
+  padding: 1rem 1rem 1rem 3rem;
+  border-left: 1px solid var(--md-default-fg-color--lightest);
+  border-right: 1px solid var(--md-default-fg-color--lightest);
+  border-bottom: 1px solid var(--md-default-fg-color--lightest);
+  border-radius: 0 0 4px 4px;
+  background: var(--md-code-bg-color);
+}
+
 /* Print layout: remove navigation UI and optimize content flow for paper/PDF */
 @page {
   size: A4;
